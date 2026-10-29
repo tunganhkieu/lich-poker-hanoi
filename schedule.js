@@ -2,12 +2,12 @@
 // Sửa lịch tuần mới ở đây: mỗi dòng RAW là một giải.
 (function (g) {
 const CLUBS = {
-  vpl:   {name:"VPL · HSOP", full:"Vietnam Poker League — HSOP Grinder Series III", addr:"Grand Plaza Hotel, Hà Nội", url:"https://vietnampokerleague.com/", color:"#e3b94f"},
-  center:{name:"Center Poker", full:"Center Poker Club", addr:"Hà Nội", url:"https://centerpoker.vn/", color:"#b892ff"},
-  royal: {name:"Royal Poker", full:"Royal Poker Tour", addr:"Hà Nội", url:"https://royal-poker.com/en", color:"#ff7aa2"},
-  quads: {name:"Quads", full:"Quads Poker Club", addr:"Hà Nội", url:"https://quadspoker.vn/", color:"#45d3c7"},
-  gl:    {name:"Grand Loyal", full:"Grand Loyal Poker", addr:"Tầng 2, 146 Giảng Võ, Ba Đình · 0869 583 586", url:"https://grandloyal.vn/", color:"#77adff"},
-  arena: {name:"Arena", full:"Arena Poker Club", addr:"Tầng 3 CTM Complex, 139 Cầu Giấy · 079 768 6626", url:"https://arenapoker.vn/", color:"#a7e35f"},
+  vpl:   {name:"VPL · HSOP", full:"Vietnam Poker League — HSOP Grinder Series III", addr:"Grand Plaza Hotel, Hà Nội", url:"https://vietnampokerleague.com/", color:"#b8892e"},
+  center:{name:"Center Poker", full:"Center Poker Club", addr:"Hà Nội", url:"https://centerpoker.vn/", color:"#7b4fd6"},
+  royal: {name:"Royal Poker", full:"Royal Poker Tour", addr:"Hà Nội", url:"https://royal-poker.com/en", color:"#c2386a"},
+  quads: {name:"Quads", full:"Quads Poker Club", addr:"Hà Nội", url:"https://quadspoker.vn/", color:"#0e8f84"},
+  gl:    {name:"Grand Loyal", full:"Grand Loyal Poker", addr:"Tầng 2, 146 Giảng Võ, Ba Đình · 0869 583 586", url:"https://grandloyal.vn/", color:"#2f6fd0"},
+  arena: {name:"Arena", full:"Arena Poker Club", addr:"Tầng 3 CTM Complex, 139 Cầu Giấy · 079 768 6626", url:"https://arenapoker.vn/", color:"#4e8a1c"},
 };
 
 // [ngày MM-DD, giờ bắt đầu, tên, buy-in (nghìn đ), GTD (nghìn đ | "N vé" | null), giờ đóng reg | null, số entry GTD CLB công bố]
