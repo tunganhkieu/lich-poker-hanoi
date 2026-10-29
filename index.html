@@ -1,0 +1,500 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Lịch Poker Hà Nội</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Bố cục: thanh đầu dính + dải cảnh báo Overlay + bộ lọc + danh sách giải chia theo trạng thái. Một giao diện tối xanh đen duy nhất, có chủ ý. */
+:root{
+  --bg:#060b15; --surface:#0c1524; --surface-2:#122038; --line:#1d2e4b;
+  --fg:#e4ecf8; --muted:#8a9dbb; --dim:#5d7092;
+  --accent:#5fb4ff; --open:#38d996; --hot:#ff6a3d; --hot-soft:rgba(255,106,61,.12);
+  --f-display:"Barlow Condensed","Arial Narrow",sans-serif;
+  --f-body:"Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --r:12px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:14px;line-height:1.45;
+  background-image:radial-gradient(1200px 500px at 85% -10%,rgba(95,180,255,.08),transparent 60%);background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+button,select,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.num{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+
+/* Thanh đầu */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(6,11,21,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.chip-logo{width:34px;height:34px;flex:none;border-radius:50%;background:var(--surface-2);border:2px dashed var(--accent);display:grid;place-items:center;font-family:var(--f-display);font-weight:700;color:var(--accent);font-size:13px}
+h1{font-family:var(--f-display);font-weight:700;font-size:24px;letter-spacing:.02em;margin:0;text-transform:uppercase;line-height:1}
+.sub{color:var(--muted);font-size:12px}
+.clock{text-align:right}
+.clock b{font-family:var(--f-mono);font-size:20px;display:block;line-height:1.1}
+.clock span{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.08em}
+.clock.sim b{color:var(--hot)}
+
+/* Dải Overlay */
+.ov-sec{padding-block:18px 6px}
+.sec-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin:0 0 10px;font-family:var(--f-display);font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:.04em}
+.sec-title small{font-family:var(--f-body);font-weight:500;font-size:12px;color:var(--muted);text-transform:none;letter-spacing:0}
+.pulse{width:10px;height:10px;border-radius:50%;background:var(--hot);box-shadow:0 0 0 0 rgba(255,106,61,.6);animation:pulse 1.6s infinite;align-self:center}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(255,106,61,0)}100%{box-shadow:0 0 0 0 rgba(255,106,61,0)}}
+.ov-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,320px);gap:12px;overflow-x:auto;padding-bottom:8px;scroll-snap-type:x mandatory}
+.ov-card{scroll-snap-align:start;background:linear-gradient(160deg,rgba(255,106,61,.16),rgba(255,106,61,.03) 60%),var(--surface);border:1px solid rgba(255,106,61,.55);border-radius:var(--r);padding:14px;display:grid;gap:8px;cursor:pointer;text-align:left}
+.ov-card:hover{border-color:var(--hot)}
+.ov-top{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.ov-name{font-weight:600;font-size:15px;line-height:1.3}
+.ov-cd{font-family:var(--f-mono);font-size:22px;font-weight:700;color:var(--hot)}
+.ov-cd small{font-family:var(--f-body);font-size:11px;font-weight:500;color:var(--muted);display:block}
+.ov-stats{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--muted)}
+.ov-stats b{color:var(--fg);font-family:var(--f-mono)}
+.ov-empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:16px;color:var(--muted)}
+
+/* Bộ lọc */
+.filters{padding-block:12px;display:grid;gap:10px}
+.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px}
+.day{flex:none;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 14px;text-align:center;min-width:76px}
+.day b{display:block;font-family:var(--f-display);font-size:18px;line-height:1}
+.day span{font-size:11px;color:var(--muted)}
+.day[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#04101f}
+.day[aria-pressed="true"] span{color:#0d2a47}
+.frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.frow>.frow{flex:1 1 0;min-width:0}
+.flabel{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);min-width:64px}
+.pill{background:transparent;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.pill .dot{width:8px;height:8px;border-radius:50%}
+.pill[aria-pressed="true"]{color:var(--fg);background:var(--surface-2);border-color:var(--accent)}
+select,input[type=time],input[type=number]{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:5px 8px;font-size:13px}
+.toggle{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.more{display:none}
+.more-btn{display:none}
+
+/* Thanh tóm tắt */
+.summary{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13px;padding-block:6px 4px;border-top:1px solid var(--line)}
+.summary b{color:var(--fg);font-family:var(--f-mono)}
+.demo-note{background:rgba(95,180,255,.08);border:1px solid rgba(95,180,255,.3);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.demo-note b{color:var(--fg)}
+.link-btn{background:none;border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:12px;color:var(--accent)}
+
+/* Danh sách */
+.group{padding-block:14px}
+.group h2{font-family:var(--f-display);font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;display:flex;gap:8px;align-items:center}
+.group h2 .n{font-family:var(--f-mono);font-size:12px;background:var(--surface-2);border-radius:6px;padding:1px 6px;color:var(--fg)}
+.list{display:grid;gap:8px}
+.t{display:grid;grid-template-columns:72px minmax(0,1fr) 92px 100px 132px 170px;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--club);border-radius:var(--r);padding:12px 14px}
+.t.closed{opacity:.55}
+.t.overlay{border-color:rgba(255,106,61,.6);border-left-color:var(--hot);background:linear-gradient(90deg,var(--hot-soft),transparent 55%),var(--surface)}
+.t.flash{animation:flash 1.2s ease 2}
+@keyframes flash{50%{box-shadow:0 0 0 3px var(--hot)}}
+.t-time b{font-family:var(--f-display);font-size:26px;line-height:1;display:block}
+.t-time span{font-size:11px;color:var(--muted)}
+.t-main{min-width:0}
+.t-club{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--club)}
+.t-name{font-weight:600;font-size:15px;line-height:1.3;overflow-wrap:anywhere}
+.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
+.b{font-size:11px;font-weight:600;border-radius:6px;padding:2px 7px;letter-spacing:.02em}
+.b-open{background:rgba(56,217,150,.12);color:var(--open)}
+.b-up{background:rgba(95,180,255,.12);color:var(--accent)}
+.b-closed{background:var(--surface-2);color:var(--dim)}
+.b-hot{background:var(--hot);color:#1a0700}
+.b-sat{background:var(--surface-2);color:var(--muted)}
+.stat span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim)}
+.stat b{font-family:var(--f-mono);font-size:15px}
+.stat.close b{color:var(--fg)}
+.stat em{font-style:normal;display:block;font-size:12px;color:var(--muted);font-family:var(--f-mono)}
+.stat.close.soon em{color:var(--hot)}
+.ent{display:grid;gap:5px}
+.ent-top{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.ent-top b{font-family:var(--f-mono);color:var(--fg)}
+.bar{height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--open);border-radius:3px}
+.overlay .bar i{background:var(--hot)}
+.ent-gap{font-size:12px;color:var(--hot);font-weight:600}
+.ent-na{font-size:12px;color:var(--dim)}
+.edit{display:flex;gap:6px;align-items:center}
+.edit input{width:70px}
+.edit-btn{background:none;border:none;color:var(--accent);font-size:12px;padding:0;text-align:left}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:24px;text-align:center;color:var(--muted)}
+
+/* CLB */
+.clubs{padding-block:24px 40px;border-top:1px solid var(--line);margin-top:16px}
+.club-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:10px}
+.club{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;display:grid;gap:3px}
+.club b{color:var(--club);font-size:14px}
+.club span{color:var(--muted);font-size:12px}
+.club a{color:var(--accent);font-size:12px;text-decoration:none}
+.foot{color:var(--dim);font-size:12px;margin-top:14px;max-width:70ch}
+.toast{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--surface-2);border:1px solid var(--line);border-radius:10px;padding:10px 14px;font-size:13px;z-index:30}
+
+@media (max-width:900px){
+  .t{grid-template-columns:62px minmax(0,1fr) auto;grid-template-areas:"time main main" "bi gtd close" "ent ent ent";row-gap:10px}
+  .t-time{grid-area:time}.t-main{grid-area:main}.s-bi{grid-area:bi}.s-gtd{grid-area:gtd}.s-close{grid-area:close}.ent{grid-area:ent}
+  .t-time b{font-size:22px}
+}
+@media (max-width:640px){
+  h1{font-size:20px}
+  .sub{display:none}
+  .more-btn{display:inline-flex}
+  .more{display:none}
+  .filters.open .more{display:flex}
+  .more.always{display:flex}
+  .clock b{font-size:17px}
+}
+@media (min-width:641px){.more{display:flex}}
+@media (prefers-reduced-motion:reduce){.pulse,.t.flash{animation:none}}
+</style>
+
+<header>
+  <div class="wrap head">
+    <div class="brand">
+      <div class="chip-logo" aria-hidden="true">HN</div>
+      <div>
+        <h1>Lịch Poker Hà Nội</h1>
+        <div class="sub">Lịch giải 6 CLB, cảnh báo overlay trước giờ đóng đăng ký</div>
+      </div>
+    </div>
+    <div class="clock" id="clock"><b class="num" id="clockTime">--:--</b><span id="clockLabel">Giờ Hà Nội</span></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="ov-sec" aria-labelledby="ovTitle">
+    <h2 class="sec-title" id="ovTitle"><span class="pulse" aria-hidden="true"></span>Đang overlay <small>Còn dưới 1 giờ đóng đăng ký mà chưa đủ entry để phủ GTD</small></h2>
+    <div class="ov-row" id="ovRow"></div>
+  </section>
+
+  <section class="filters" id="filters" aria-label="Bộ lọc">
+    <div class="days" id="days" role="group" aria-label="Chọn ngày"></div>
+    <div class="frow">
+      <span class="flabel">CLB</span>
+      <div class="frow" id="clubPills" role="group" aria-label="Lọc CLB"></div>
+    </div>
+    <div class="frow">
+      <span class="flabel">Buy-in</span>
+      <div class="frow" id="buyPills" role="group" aria-label="Lọc buy-in"></div>
+      <button class="pill more-btn" id="moreBtn" aria-expanded="false">Thêm bộ lọc</button>
+    </div>
+    <div class="frow more">
+      <span class="flabel">Đóng reg</span>
+      <label class="toggle">từ <select id="closeFrom" aria-label="Đóng đăng ký từ giờ"></select></label>
+      <label class="toggle">đến <select id="closeTo" aria-label="Đóng đăng ký đến giờ"></select></label>
+      <label class="toggle">Xếp theo
+        <select id="sort" aria-label="Sắp xếp">
+          <option value="close">Giờ đóng reg sớm nhất</option>
+          <option value="start">Giờ bắt đầu</option>
+          <option value="buyin">Buy-in thấp → cao</option>
+          <option value="gtd">GTD cao → thấp</option>
+        </select>
+      </label>
+      <label class="toggle"><input type="checkbox" id="showClosed"> Hiện giải đã đóng reg</label>
+    </div>
+    <div class="frow more">
+      <span class="flabel">Giờ xem</span>
+      <input type="time" id="simTime" aria-label="Xem thử ở giờ khác">
+      <button class="link-btn" id="simReset" hidden>Về giờ thật</button>
+      <span class="sub" style="display:inline">Đổi giờ để xem thử cảnh báo overlay sẽ hiện lúc nào</span>
+    </div>
+    <div class="demo-note" id="demoNote" hidden></div>
+    <div class="summary" id="summary"></div>
+  </section>
+
+  <div id="groups"></div>
+
+  <section class="clubs" aria-labelledby="clubsTitle">
+    <h2 class="sec-title" id="clubsTitle">Các CLB</h2>
+    <div class="club-grid" id="clubGrid"></div>
+    <p class="foot">Lịch lấy từ trang chính thức của từng CLB ngày 29/10/2026. Số entry cần để phủ GTD tính theo phí 22% (buy-in ÷ 1,22 vào giải thưởng); riêng Arena dùng đúng số CLB công bố. Giải chia flight (Day 1A, 1B…) có GTD tính chung cả giải nên không cảnh báo theo từng flight. Luôn xác nhận lại với CLB trước khi đến.</p>
+  </section>
+</main>
+<div class="toast" id="toast" hidden></div>
+
+<script src="schedule.js" charset="utf-8"></script>
+<script>
+const {CLUBS, YEAR, FEE, HOUR, vnTs, vnParts} = HNP;
+const TOURS = HNP.buildTours();
+const BUY = [
+  {k:"lt1", label:"< 1M", test:b=>b<1000},
+  {k:"1-3", label:"1–3M", test:b=>b>=1000&&b<3000},
+  {k:"3-10", label:"3–10M", test:b=>b>=3000&&b<10000},
+  {k:"10+", label:"10M+", test:b=>b>=10000},
+];
+
+// ===== Trạng thái =====
+const state = {day:null, clubs:new Set(), buy:new Set(), closeFrom:"", closeTo:"", sort:"close", showClosed:false, sim:"", demo:true};
+let real = {};            // entry thật đã gộp: id -> {n, at}
+let fromFile = {}, fromDb = {}, fileUpdatedAt = 0;
+// Gộp hai nguồn: entries.json (script tự động) và số nhập tay (db); lấy số mới hơn
+function mergeReal(){
+  const out = {...fromFile};
+  for (const [id, v] of Object.entries(fromDb)) if (!out[id] || (v.at||0) >= (out[id].at||0)) out[id] = v;
+  real = out;
+  if (Object.keys(real).length && state.demo && !connect.userSet) state.demo = false;
+  if (!editing) render();
+}
+const validEntry = v => v && Number.isSafeInteger(v.n) && v.n >= 0 && Number.isFinite(v.at);
+const STALE = 45*60e3; // số entry cũ hơn 45 phút không dùng để báo overlay
+async function loadFile(){
+  try {
+    const r = await fetch("entries.json?t=" + Date.now(), {cache:"no-store"});
+    if (!r.ok) return;
+    const j = await r.json();
+    const next = {};
+    for (const [id, v] of Object.entries(j.entries || {})) if (validEntry(v)) next[id] = {n:v.n, at:v.at};
+    fromFile = next; fileUpdatedAt = Number(j.updatedAt) || 0;
+    mergeReal();
+  } catch { /* chưa có file: dùng số mẫu */ }
+}
+let db = null, canWrite = false, editing = null;
+
+const now = () => state.sim ? vnTs(state.day, state.sim) : Date.now();
+const hash = s => { let h=2166136261; for (const c of s) h = Math.imul(h ^ c.charCodeAt(0), 16777619); return ((h>>>0)%1000)/1000; };
+
+function entriesOf(t, n){
+  if (real[t.id]) return {n:real[t.id].n, at:real[t.id].at, demo:false};
+  if (!state.demo || !t.needed) return null;
+  // Số entry mẫu: tăng dần theo thời gian, một số giải sẽ hụt GTD
+  const span = (t.closeTs ?? t.startTs+4*HOUR) - t.startTs + 2*HOUR;
+  const p = Math.max(0, Math.min(1, (n - t.startTs + 2*HOUR) / span));
+  const target = t.needed * (0.45 + 1.0*hash(t.id));
+  return {n:Math.floor(target*p), demo:true};
+}
+
+function info(t, n){
+  const e = entriesOf(t, n);
+  let status = "up";
+  if (t.closeTs !== null && n >= t.closeTs) status = "closed";
+  else if (n >= t.startTs) status = "open";
+  const inLastHour = t.closeTs !== null && n >= t.closeTs - HOUR && n < t.closeTs;
+  const fresh = e && (e.demo || Date.now() - e.at < STALE);
+  const overlay = !!(inLastHour && t.needed && !t.flight && fresh && e.n < t.needed);
+  const gap = overlay ? t.needed - e.n : 0;
+  const ovAmount = overlay ? Math.max(0, t.gtdNum - e.n * t.buyin / FEE) : 0;
+  return {e, status, overlay, gap, ovAmount, inLastHour};
+}
+
+// ===== Định dạng =====
+const money = k => {
+  if (k >= 1e6) return trim(k/1e6) + "B";
+  if (k >= 1000) return trim(k/1000) + "M";
+  return Math.round(k) + "K";
+};
+const trim = v => (Math.round(v*10)/10).toString();
+const gtdText = t => t.gtdNum ? money(t.gtdNum) : (t.gtd || "—");
+const dur = ms => { const m = Math.max(0, Math.round(ms/60000)); const h = Math.floor(m/60); return h ? `${h}g ${String(m%60).padStart(2,"0")}p` : `${m}p`; };
+const hhmmss = ms => { const s=Math.max(0,Math.floor(ms/1000)); return `${String(Math.floor(s/3600)).padStart(2,"0")}:${String(Math.floor(s%3600/60)).padStart(2,"0")}:${String(s%60).padStart(2,"0")}`; };
+const WD = ["CN","T2","T3","T4","T5","T6","T7"];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $ = id => document.getElementById(id);
+
+// ===== Dựng bộ lọc =====
+const DAYS = [...new Set(TOURS.map(t=>t.md))].sort();
+function initFilters(){
+  const today = vnParts(Date.now()).md;
+  state.day = DAYS.includes(today) ? today : DAYS[0];
+  try { const s = JSON.parse(localStorage.getItem("hnp-filters")||"{}"); if (s.clubs) state.clubs = new Set(s.clubs); if (s.buy) state.buy = new Set(s.buy); if (["close","start","buyin","gtd"].includes(s.sort)) state.sort = s.sort; } catch {}
+
+  $("days").innerHTML = DAYS.map(md => {
+    const [M,D] = md.split("-"); const wd = new Date(Date.UTC(YEAR,M-1,D)).getUTCDay();
+    return `<button class="day" data-day="${md}"><b>${md===today?"Hôm nay":WD[wd]}</b><span>${D}/${M}</span></button>`;
+  }).join("");
+  $("clubPills").innerHTML = Object.entries(CLUBS).map(([k,c]) => `<button class="pill" data-club="${k}"><span class="dot" style="background:${c.color}"></span>${esc(c.name)}</button>`).join("");
+  $("buyPills").innerHTML = BUY.map(b => `<button class="pill" data-buy="${b.k}">${b.label}</button>`).join("");
+  const hours = ['<option value="">Bất kỳ</option>'].concat(Array.from({length:25},(_,h)=>`<option value="${h}">${String(h).padStart(2,"0")}:00</option>`)).join("");
+  $("closeFrom").innerHTML = hours; $("closeTo").innerHTML = hours;
+  $("sort").value = state.sort;
+
+  $("days").onclick = e => { const b = e.target.closest("[data-day]"); if (!b) return; state.day = b.dataset.day; render(); };
+  $("clubPills").onclick = e => { const b = e.target.closest("[data-club]"); if (!b) return; toggleSet(state.clubs, b.dataset.club); save(); render(); };
+  $("buyPills").onclick = e => { const b = e.target.closest("[data-buy]"); if (!b) return; toggleSet(state.buy, b.dataset.buy); save(); render(); };
+  $("closeFrom").onchange = e => { state.closeFrom = e.target.value; render(); };
+  $("closeTo").onchange = e => { state.closeTo = e.target.value; render(); };
+  $("sort").onchange = e => { state.sort = e.target.value; save(); render(); };
+  $("showClosed").onchange = e => { state.showClosed = e.target.checked; render(); };
+  $("simTime").onchange = e => { state.sim = e.target.value; render(); };
+  $("simReset").onclick = () => { state.sim = ""; $("simTime").value = ""; render(); };
+  $("moreBtn").onclick = () => { const f = $("filters"); f.classList.toggle("open"); $("moreBtn").setAttribute("aria-expanded", f.classList.contains("open")); };
+  $("ovRow").onclick = e => { const c = e.target.closest("[data-goto]"); if (c) jumpTo(c.dataset.goto); };
+  $("groups").addEventListener("click", onListClick);
+  $("groups").addEventListener("submit", onEditSubmit);
+}
+const toggleSet = (s, v) => s.has(v) ? s.delete(v) : s.add(v);
+function save(){ try { localStorage.setItem("hnp-filters", JSON.stringify({clubs:[...state.clubs], buy:[...state.buy], sort:state.sort})); } catch {} }
+
+function passes(t){
+  if (state.clubs.size && !state.clubs.has(t.club)) return false;
+  if (state.buy.size && !BUY.some(b => state.buy.has(b.k) && b.test(t.buyin))) return false;
+  if (state.closeFrom !== "" || state.closeTo !== "") {
+    if (t.closeTs === null) return false;
+    const h = (t.closeTs - vnTs(t.md,"00:00")) / HOUR;   // qua nửa đêm thành 24+
+    if (state.closeFrom !== "" && h < +state.closeFrom) return false;
+    if (state.closeTo !== "" && h > +state.closeTo) return false;
+  }
+  return true;
+}
+
+// ===== Vẽ =====
+function render(){
+  const n = now();
+  for (const b of $("days").children) b.setAttribute("aria-pressed", b.dataset.day === state.day);
+  for (const b of $("clubPills").children) b.setAttribute("aria-pressed", state.clubs.has(b.dataset.club));
+  for (const b of $("buyPills").children) b.setAttribute("aria-pressed", state.buy.has(b.dataset.buy));
+  $("simReset").hidden = !state.sim;
+  $("clock").classList.toggle("sim", !!state.sim);
+  $("clockLabel").textContent = state.sim ? "Đang xem thử" : "Giờ Hà Nội";
+
+  // Dải overlay: theo giờ hiện tại (hoặc giờ xem thử), áp bộ lọc CLB và buy-in
+  const ov = TOURS.filter(t => passes(t)).map(t => ({t, i:info(t,n)})).filter(x => x.i.overlay).sort((a,b) => a.t.closeTs - b.t.closeTs);
+  $("ovRow").innerHTML = ov.length ? ov.map(({t,i}) => {
+    const c = CLUBS[t.club];
+    return `<button class="ov-card" data-goto="${t.id}" style="--club:${c.color}">
+      <div class="ov-top"><span class="t-club" style="color:${c.color}"><span class="dot" style="width:8px;height:8px;border-radius:50%;background:${c.color}"></span>${esc(c.name)}</span><span class="b b-hot">OVERLAY</span></div>
+      <div class="ov-name">${esc(t.name)}</div>
+      <div class="ov-cd num" data-cd="${t.closeTs}">${hhmmss(t.closeTs-n)}<small>đến khi đóng reg lúc ${t.close}</small></div>
+      <div class="ov-stats"><span>Buy-in <b>${money(t.buyin)}</b></span><span>GTD <b>${money(t.gtdNum)}</b></span><span>Entry <b>${i.e.n}/${t.needed}</b></span></div>
+      <div class="ent-gap">Thiếu ${i.gap} entry · CLB đang bù ~${money(i.ovAmount)}</div>
+    </button>`;
+  }).join("") : `<div class="ov-empty">Hiện chưa có giải nào overlay. Giải nào còn dưới 1 giờ đóng reg mà chưa đủ entry sẽ hiện ở đây.</div>`;
+
+  // Danh sách theo ngày
+  const list = TOURS.filter(t => t.md === state.day && passes(t)).map(t => ({t, i:info(t,n)}));
+  const sorter = {
+    close:(a,b)=>(a.t.closeTs??a.t.startTs)-(b.t.closeTs??b.t.startTs),
+    start:(a,b)=>a.t.startTs-b.t.startTs,
+    buyin:(a,b)=>a.t.buyin-b.t.buyin,
+    gtd:(a,b)=>(b.t.gtdNum||0)-(a.t.gtdNum||0),
+  }[state.sort];
+  const groups = [
+    {k:"open", title:"Đang mở đăng ký", items:list.filter(x=>x.i.status==="open").sort((a,b)=>(b.i.overlay-a.i.overlay)||sorter(a,b))},
+    {k:"up", title:"Sắp bắt đầu", items:list.filter(x=>x.i.status==="up").sort(sorter)},
+    {k:"closed", title:"Đã đóng đăng ký", items:state.showClosed ? list.filter(x=>x.i.status==="closed").sort(sorter) : []},
+  ];
+  const closedCount = list.filter(x=>x.i.status==="closed").length;
+  const html = groups.filter(g=>g.items.length).map(g => `<section class="group"><h2>${g.title} <span class="n">${g.items.length}</span></h2><div class="list">${g.items.map(x=>row(x.t,x.i,n)).join("")}</div></section>`).join("");
+  $("groups").innerHTML = html || `<div class="empty">Không có giải nào khớp bộ lọc trong ngày này.${closedCount && !state.showClosed ? ` Có ${closedCount} giải đã đóng reg, bật "Hiện giải đã đóng reg" để xem.` : ""}</div>`;
+
+  const gtdSum = list.reduce((s,x)=>s+(x.t.gtdNum||0),0);
+  $("summary").innerHTML = `<span><b>${list.length}</b> giải trong ngày</span><span><b>${list.filter(x=>x.i.status!=="closed").length}</b> còn đăng ký được</span><span>Tổng GTD <b>${money(gtdSum)}</b></span><span><b>${ov.length}</b> đang overlay</span>${fileUpdatedAt ? `<span>Entry tự cập nhật lúc <b>${String(vnParts(fileUpdatedAt).h).padStart(2,"0")}:${String(vnParts(fileUpdatedAt).m).padStart(2,"0")}</b></span>` : ""}`;
+
+  const hasReal = Object.keys(real).length > 0;
+  $("demoNote").hidden = !state.demo && hasReal;
+  $("demoNote").innerHTML = state.demo
+    ? `<span><b>Đang dùng số entry mẫu</b> để minh họa cảnh báo overlay. Số entry thật sẽ tự hiện khi script đồng bộ chạy (15 phút/lần từ 10h).</span><button class="link-btn" id="demoOff">Tắt số mẫu</button>`
+    : `<span>Đã tắt số mẫu. Chỉ giải có số entry thật mới được cảnh báo.</span><button class="link-btn" id="demoOn">Bật số mẫu</button>`;
+  const d = $("demoOff") || $("demoOn"); if (d) d.onclick = () => { state.demo = !state.demo; connect.userSet = true; render(); };
+  tick();
+}
+
+function row(t, i, n){
+  const c = CLUBS[t.club];
+  const badge = i.overlay ? `<span class="b b-hot">OVERLAY · thiếu ${i.gap}</span>`
+    : i.status==="open" ? `<span class="b b-open">Đang mở reg</span>`
+    : i.status==="up" ? `<span class="b b-up">Bắt đầu sau ${dur(t.startTs-n)}</span>`
+    : `<span class="b b-closed">Đã đóng reg</span>`;
+  const extra = (t.isSat ? `<span class="b b-sat">Vệ tinh</span>` : "") + (t.flight ? `<span class="b b-sat">Flight · GTD cả giải</span>` : "");
+  const closeLine = t.closeTs === null ? `<b>—</b><em>CLB chưa ghi</em>`
+    : `<b class="num">${t.close}</b><em data-cd="${t.closeTs}" data-cdmode="row">${i.status==="closed" ? "đã đóng" : "còn " + dur(t.closeTs-n)}</em>`;
+  let ent;
+  if (editing === t.id) {
+    ent = `<form class="edit" data-id="${t.id}"><input type="number" min="0" id="ed-${t.id}" value="${real[t.id]?.n ?? ""}" aria-label="Số entry hiện tại" required><button class="link-btn" type="submit">Lưu</button><button class="link-btn" type="button" data-cancel>Hủy</button></form>`;
+  } else if (t.needed && i.e) {
+    const pct = Math.min(100, i.e.n / t.needed * 100);
+    ent = `<div class="ent-top"><span>Entry${i.e.demo ? " (mẫu)" : ""}</span><b>${i.e.n}/${t.needed}</b></div><div class="bar"><i style="width:${pct}%"></i></div>`
+      + (i.overlay ? `<div class="ent-gap">Bù ~${money(i.ovAmount)}</div>` : i.e.at ? `<div class="ent-na">Cập nhật ${vnParts(i.e.at).h}:${String(vnParts(i.e.at).m).padStart(2,"0")}</div>` : "");
+  } else if (t.needed) {
+    ent = `<div class="ent-top"><span>Cần để phủ GTD</span><b>${t.needed}</b></div><div class="ent-na">Chưa có số entry</div>`;
+  } else {
+    ent = `<div class="ent-na">${t.isSat ? "Giải vệ tinh, không tính overlay" : "Không có GTD"}</div>`;
+  }
+  if (canWrite && t.needed && editing !== t.id) ent += `<button class="edit-btn" data-edit="${t.id}">Cập nhật entry</button>`;
+  const soon = i.inLastHour ? " soon" : "";
+  return `<article class="t ${i.status==="closed"?"closed":""} ${i.overlay?"overlay":""}" id="t-${t.id}" style="--club:${c.color}">
+    <div class="t-time"><b>${t.start}</b><span>Bắt đầu</span></div>
+    <div class="t-main"><span class="t-club">${esc(c.name)}</span><div class="t-name">${esc(t.name)}</div><div class="badges">${badge}${extra}</div></div>
+    <div class="stat s-bi"><span>Buy-in</span><b>${money(t.buyin)}</b></div>
+    <div class="stat s-gtd"><span>GTD</span><b>${esc(gtdText(t))}</b></div>
+    <div class="stat close s-close${soon}"><span>Đóng reg</span>${closeLine}</div>
+    <div class="ent">${ent}</div>
+  </article>`;
+}
+
+function jumpTo(id){
+  const t = TOURS.find(x=>x.id===id); if (!t) return;
+  if (state.day !== t.md) { state.day = t.md; render(); }
+  const el = $("t-"+id); if (!el) return;
+  el.scrollIntoView({behavior:"smooth", block:"center"});
+  el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+}
+
+// Đồng hồ + đếm ngược mỗi giây; vẽ lại cả trang mỗi phút để đổi trạng thái
+let lastMinute = -1;
+function tick(){
+  const n = now(), p = vnParts(n);
+  $("clockTime").textContent = `${String(p.h).padStart(2,"0")}:${String(p.m).padStart(2,"0")}:${String(p.s).padStart(2,"0")}`;
+  document.querySelectorAll(".ov-cd[data-cd]").forEach(el => { if (el.firstChild) el.firstChild.nodeValue = hhmmss(+el.dataset.cd - n); });
+}
+setInterval(() => {
+  if (state.sim) return;
+  const m = Math.floor(Date.now()/60000);
+  if (m !== lastMinute && lastMinute !== -1 && !editing) { lastMinute = m; render(); return; }
+  lastMinute = m; tick();
+}, 1000);
+
+// ===== Cập nhật entry (db) =====
+function onListClick(e){
+  const ed = e.target.closest("[data-edit]");
+  if (ed) { editing = ed.dataset.edit; render(); const inp = $("ed-"+editing); if (inp) inp.focus(); return; }
+  if (e.target.closest("[data-cancel]")) { editing = null; render(); }
+}
+async function onEditSubmit(e){
+  e.preventDefault();
+  const id = e.target.dataset.id, v = parseInt(e.target.querySelector("input").value, 10);
+  if (!db || isNaN(v) || v < 0) return;
+  try {
+    const at = Date.now();
+    await db.collection("entries").doc(id).set({n:v, at});
+    editing = null; fromDb = {...fromDb, [id]:{n:v, at}}; mergeReal(); toast("Đã lưu số entry");
+  } catch (err) {
+    if (err && err.code === "invalid_argument") { canWrite = false; editing = null; render(); toast("Bạn không có quyền cập nhật entry"); }
+    else toast("Chưa lưu được, thử lại sau ít giây");
+  }
+}
+function toast(msg){ const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toast.h); toast.h = setTimeout(()=>t.hidden=true, 2600); }
+
+function renderClubs(){
+  $("clubGrid").innerHTML = Object.entries(CLUBS).map(([k,c]) => {
+    const cnt = TOURS.filter(t=>t.club===k).length;
+    return `<div class="club" style="--club:${c.color}"><b>${esc(c.full)}</b><span>${esc(c.addr)}</span><span>${cnt ? cnt + " giải trong lịch" : "Chưa có lịch giải tuần này trên web CLB"}</span><a href="${c.url}" target="_blank" rel="noopener">${c.url.replace(/^https:\/\//,"").replace(/\/$/,"")} ↗</a></div>`;
+  }).join("");
+}
+
+async function connect(){
+  if (!window.claude || !window.claude.use) return;
+  let can = null;
+  try {
+    db = await window.claude.use("db");
+    if (!db) return;
+    const user = await window.claude.use("user");
+    can = user ? await user.can("data.write") : null;
+  } catch { db = null; return; }
+  canWrite = can !== false;
+  db.collection("entries").onSnapshot(snap => {
+    const next = {};
+    snap.docs.forEach(d => { const v = d.data(); if (validEntry(v)) next[d.id] = {n:v.n, at:v.at}; });
+    fromDb = next;
+    mergeReal();
+  }, () => {});
+  render();
+}
+
+initFilters();
+renderClubs();
+render();
+connect();
+loadFile();
+setInterval(loadFile, 60000);
+</script>

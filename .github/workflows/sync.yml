@@ -1,0 +1,37 @@
+name: Cap nhat entry
+
+on:
+  schedule:
+    # 15 phut/lan tu 10:00 den 00:45 gio Ha Noi (03:00-17:45 UTC)
+    - cron: "*/15 3-17 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+      - run: node sync/sync.mjs
+      - name: Luu entries.json
+        run: |
+          git config user.name "poker-sync"
+          git config user.email "actions@users.noreply.github.com"
+          git add entries.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Cap nhat entry $(TZ=Asia/Ho_Chi_Minh date +'%d/%m %H:%M')"
+          git pull --rebase -X theirs || true
+          git push
