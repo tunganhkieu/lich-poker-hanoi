@@ -1,7 +1,7 @@
 {
- "updatedAt": 1793289825234,
+ "updatedAt": 1793307865616,
  "days": [
-  "10-29"
+  "10-30"
  ],
  "entries": {
   "arena-10-29-2000-arena-night-25-itm": {
@@ -91,21 +91,25 @@
  },
  "log": {
   "arena": {
-   "found": 18,
-   "matched": 6,
-   "unmatched": []
-  },
-  "center": {
-   "found": 18,
-   "matched": 7,
+   "found": 16,
+   "matched": 0,
    "unmatched": [
-    "CenterP Evening DeepStack Turbo - GTD 10 Entries",
-    "LIVE TRAKER"
+    "ARENA NIGHT (25% ITM)",
+    "HYPER CLASH",
+    "THE GLADIATOR DASH (25%ITM)",
+    "SATELLITE FOR THE GLADIATOR DASH",
+    "COLOSSEUM ARENA EXPRESS",
+    "VENUS SHOWDOWN"
    ]
   },
+  "center": {
+   "found": 0,
+   "matched": 0,
+   "unmatched": []
+  },
   "royal": {
-   "found": 958,
-   "matched": 8,
+   "found": 947,
+   "matched": 0,
    "unmatched": []
   },
   "gl": {
