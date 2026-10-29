@@ -55,74 +55,78 @@ h1{font-family:var(--f-display);font-weight:800;font-size:22px;letter-spacing:.0
 .ov-cd small{font-family:var(--f-body);font-size:11px;font-weight:500;color:var(--ink-muted);display:block}
 .ov-stats{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--ink-muted)}
 .ov-stats b{color:var(--ink-fg);font-family:var(--f-mono)}
+.ent-gap{font-size:12px;font-weight:600}
 .ov-card .ent-gap{color:#ff8b73}
 .ov-empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:16px;color:var(--muted)}
 
-/* Bộ lọc */
-.filters{padding-block:12px;display:grid;gap:10px}
-.days{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px}
-.day{flex:none;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:8px 14px;text-align:center;min-width:76px}
-.day b{display:block;font-family:var(--f-display);font-weight:800;font-size:16px;line-height:1.1}
-.day span{font-size:11px;color:var(--muted)}
-.day[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--gold-light)}
-.day[aria-pressed="true"] span{color:var(--ink-muted)}
-.frow{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.frow>.frow{flex:1 1 0;min-width:0}
-.flabel{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);min-width:64px}
-.pill{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
-.pill .dot{width:8px;height:8px;border-radius:50%}
+/* Bộ lọc: gom trong một khung */
+.filters{padding-block:10px;display:grid;gap:8px}
+.fbox{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:10px;display:grid;gap:8px}
+.fline{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.scroll-x{display:flex;gap:6px;overflow-x:auto;flex-wrap:nowrap;scrollbar-width:none;min-width:0}
+.scroll-x::-webkit-scrollbar{display:none}
+.days{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+.days::-webkit-scrollbar{display:none}
+.day{flex:none;background:var(--surface-2);border:1px solid transparent;border-radius:10px;padding:5px 10px;font-size:12px;color:var(--muted);white-space:nowrap}
+.day b{font-family:var(--f-display);font-weight:800;color:var(--fg);margin-right:4px}
+.day[aria-pressed="true"]{background:var(--ink);color:var(--ink-muted)}
+.day[aria-pressed="true"] b{color:var(--gold-light)}
+.pill{flex:none;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--muted);display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.pill .dot{width:7px;height:7px;border-radius:50%}
 .pill[aria-pressed="true"]{color:var(--gold-light);background:var(--ink);border-color:var(--ink)}
-select,input[type=time],input[type=number]{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:5px 8px;font-size:13px}
-.toggle{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
-.more{display:none}
+.seg{display:inline-flex;background:var(--surface-2);border-radius:999px;padding:2px}
+.seg button{border:0;background:none;border-radius:999px;padding:4px 10px;font-size:12px;color:var(--muted);white-space:nowrap}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--gold-light)}
+select,input[type=time],input[type=number]{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 8px;font-size:12px;color:var(--fg)}
+.toggle{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);white-space:nowrap}
+.fsep{width:1px;height:18px;background:var(--line)}
 .more-btn{display:none}
 
-/* Thanh tóm tắt */
-.summary{display:flex;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:13px;padding-block:6px 4px;border-top:1px solid var(--line)}
+/* Tóm tắt */
+.summary{display:flex;gap:4px 14px;flex-wrap:wrap;color:var(--muted);font-size:12px;padding-inline:2px}
 .summary b{color:var(--fg);font-family:var(--f-mono)}
-.demo-note{background:#fbf3e1;border:1px solid #ecd9ad;border-radius:10px;padding:10px 12px;font-size:13px;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.demo-note{background:#fbf3e1;border:1px solid #ecd9ad;border-radius:10px;padding:6px 10px;font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:space-between}
 .demo-note b{color:var(--fg)}
-.link-btn{background:none;border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:12px;color:var(--accent)}
+.link-btn{background:none;border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12px;color:var(--accent);background:var(--surface)}
 
-/* Danh sách */
-.group{padding-block:14px}
-.group h2{font-family:var(--f-display);font-weight:800;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;display:flex;gap:8px;align-items:center}
-.group h2 .n{font-family:var(--f-mono);font-size:12px;background:var(--ink);border-radius:6px;padding:1px 6px;color:var(--gold-light)}
-.list{display:grid;gap:8px}
-.t{display:grid;grid-template-columns:72px minmax(0,1fr) 92px 100px 132px 170px;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--club);border-radius:var(--r);padding:12px 14px;box-shadow:0 1px 2px rgba(33,22,14,.04)}
-.t.closed{opacity:.6;background:var(--surface-2)}
-.t.overlay{border-color:rgba(210,54,31,.4);border-left-color:var(--hot);background:linear-gradient(90deg,var(--hot-soft),transparent 55%),var(--surface)}
+/* Danh sách giải: mỗi giải một hàng */
+.group{padding-block:8px}
+.group h2{font-family:var(--f-display);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;display:flex;gap:8px;align-items:center}
+.group h2 .n{font-family:var(--f-mono);font-size:11px;background:var(--ink);border-radius:6px;padding:1px 6px;color:var(--gold-light)}
+.list{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.thead,.t{display:grid;grid-template-columns:50px minmax(0,1fr) 64px 70px 104px 128px;gap:10px;align-items:center;padding:8px 12px}
+.thead{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);background:var(--surface-2);padding-block:6px}
+.t{position:relative;border-top:1px solid var(--line);border-left:3px solid var(--club)}
+.thead + .t{border-top:0}
+.t:hover{background:#fdfbf7}
+.t.closed{opacity:.55}
+.t.overlay{background:var(--hot-soft);border-left-color:var(--hot)}
 .t.flash{animation:flash 1.2s ease 2}
-@keyframes flash{50%{box-shadow:0 0 0 3px var(--hot)}}
-.t-time b{font-family:var(--f-mono);font-weight:700;font-size:22px;line-height:1;display:block}
-.t-time span{font-size:11px;color:var(--muted)}
-.t-main{min-width:0}
-.t-club{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--club)}
-.t-name{font-weight:700;font-size:15px;line-height:1.3;overflow-wrap:anywhere}
-.badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
-.b{font-size:11px;font-weight:600;border-radius:6px;padding:2px 7px;letter-spacing:.02em}
+@keyframes flash{50%{box-shadow:inset 0 0 0 2px var(--hot)}}
+.t-time{font-family:var(--f-mono);font-weight:700;font-size:15px}
+.t-main{min-width:0;display:flex;align-items:center;gap:8px}
+.t-name{min-width:0;flex:1;font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.t-club{font-size:10px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--club);margin-right:6px}
+.b{flex:none;font-size:10px;font-weight:700;border-radius:5px;padding:2px 6px;letter-spacing:.02em;white-space:nowrap}
 .b-open{background:rgba(27,143,90,.1);color:var(--open)}
 .b-up{background:rgba(223,186,107,.2);color:var(--accent)}
 .b-closed{background:var(--surface-2);color:var(--dim)}
 .b-hot{background:var(--hot);color:#fff}
 .b-sat{background:var(--surface-2);color:var(--muted)}
-.stat span{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim)}
-.stat b{font-family:var(--f-mono);font-size:15px}
-.stat.close b{color:var(--fg)}
-.stat em{font-style:normal;display:block;font-size:12px;color:var(--muted);font-family:var(--f-mono)}
-.stat.close.soon em{color:var(--hot)}
-.ent{display:grid;gap:5px}
-.ent-top{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
-.ent-top b{font-family:var(--f-mono);color:var(--fg)}
-.bar{height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden}
-.bar i{display:block;height:100%;background:var(--open);border-radius:3px}
-.overlay .bar i{background:var(--hot)}
-.ent-gap{font-size:12px;color:var(--hot);font-weight:600}
-.ent-na{font-size:12px;color:var(--dim)}
-.edit{display:flex;gap:6px;align-items:center}
-.edit input{width:70px}
-.edit-btn{background:none;border:none;color:var(--accent);font-size:12px;padding:0;text-align:left}
-.empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:24px;text-align:center;color:var(--muted)}
+.meta{display:contents}
+.c{font-family:var(--f-mono);font-size:13px;white-space:nowrap}
+.c em{font-style:normal;color:var(--muted);font-size:11px;margin-left:4px}
+.c.soon em{color:var(--hot);font-weight:700}
+.c-ent{display:flex;align-items:center;gap:6px;justify-content:flex-end}
+.c-ent .gap{color:var(--hot);font-size:11px;font-weight:700}
+.c-ent .na{color:var(--dim);font-family:var(--f-body);font-size:11px}
+.bar{position:absolute;left:0;right:0;bottom:0;height:3px;background:transparent}
+.bar i{display:block;height:100%;background:var(--open);opacity:.7}
+.overlay .bar i{background:var(--hot);opacity:1}
+.edit{display:flex;gap:4px;align-items:center}
+.edit input{width:58px}
+.edit-btn{background:none;border:none;color:var(--accent);font-size:13px;padding:0 2px}
+.empty{background:var(--surface);border:1px dashed var(--line);border-radius:var(--r);padding:20px;text-align:center;color:var(--muted)}
 
 /* CLB */
 .clubs{padding-block:24px 40px;border-top:1px solid var(--line);margin-top:16px}
@@ -134,21 +138,33 @@ select,input[type=time],input[type=number]{background:var(--surface);border:1px 
 .foot{color:var(--dim);font-size:12px;margin-top:14px;max-width:70ch}
 .toast{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--ink-fg);border:1px solid var(--ink);border-radius:10px;padding:10px 14px;font-size:13px;z-index:30}
 
-@media (max-width:900px){
-  .t{grid-template-columns:62px minmax(0,1fr) auto;grid-template-areas:"time main main" "bi gtd close" "ent ent ent";row-gap:10px}
-  .t-time{grid-area:time}.t-main{grid-area:main}.s-bi{grid-area:bi}.s-gtd{grid-area:gtd}.s-close{grid-area:close}.ent{grid-area:ent}
-  .t-time b{font-size:19px}
+@media (max-width:760px){
+  .thead{display:none}
+  .t{display:flex;flex-wrap:wrap;align-items:center;column-gap:10px;row-gap:3px;padding:7px 10px}
+  .t-time{width:42px;font-size:14px}
+  .t-main{flex:1 1 calc(100% - 52px)}
+  .meta{display:flex;flex-wrap:nowrap;align-items:center;gap:7px;margin-left:49px;width:calc(100% - 49px);min-width:0}
+  .c-close{min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .c-ent{margin-left:auto;flex:none}
+  .c-ent .gap{display:none}
+  .c.c-ent::before{content:none}
+  .t{column-gap:7px}
+  .c em{margin-left:3px}
+  .t-main{flex-basis:calc(100% - 49px)}
+  .c{font-size:11px;color:var(--muted)}
+  .c::before{content:attr(data-l) " ";font-family:var(--f-body);color:var(--dim);font-size:10px}
+  .c b{color:var(--fg);font-weight:600}
+  .t-name{font-size:13px}
 }
+@media (max-width:360px){.c em{display:none}}
 @media (max-width:640px){
   h1{font-size:17px}
   .sub{display:none}
-  .more-btn{display:inline-flex}
-  .more{display:none}
-  .filters.open .more{display:flex}
-  .more.always{display:flex}
   .clock b{font-size:17px}
+  .more-btn{display:inline-flex}
+  .fline.more{display:none}
+  .filters.open .fline.more{display:flex}
 }
-@media (min-width:641px){.more{display:flex}}
 @media (prefers-reduced-motion:reduce){.pulse,.t.flash{animation:none}}
 </style>
 
@@ -172,35 +188,30 @@ select,input[type=time],input[type=number]{background:var(--surface);border:1px 
   </section>
 
   <section class="filters" id="filters" aria-label="Bộ lọc">
-    <div class="days" id="days" role="group" aria-label="Chọn ngày"></div>
-    <div class="frow">
-      <span class="flabel">CLB</span>
-      <div class="frow" id="clubPills" role="group" aria-label="Lọc CLB"></div>
-    </div>
-    <div class="frow">
-      <span class="flabel">Buy-in</span>
-      <div class="frow" id="buyPills" role="group" aria-label="Lọc buy-in"></div>
-      <button class="pill more-btn" id="moreBtn" aria-expanded="false">Thêm bộ lọc</button>
-    </div>
-    <div class="frow more">
-      <span class="flabel">Đóng reg</span>
-      <label class="toggle">từ <select id="closeFrom" aria-label="Đóng đăng ký từ giờ"></select></label>
-      <label class="toggle">đến <select id="closeTo" aria-label="Đóng đăng ký đến giờ"></select></label>
-      <label class="toggle">Xếp theo
+    <div class="fbox">
+      <div class="days" id="days" role="group" aria-label="Chọn ngày"></div>
+      <div class="scroll-x" id="clubPills" role="group" aria-label="Lọc CLB"></div>
+      <div class="fline">
+        <div class="seg" id="typeSeg" role="group" aria-label="Loại giải">
+          <button data-type="all">Tất cả</button><button data-type="main">Giải chính</button><button data-type="sat">Satellite</button>
+        </div>
+        <select id="buySel" aria-label="Buy-in"></select>
         <select id="sort" aria-label="Sắp xếp">
-          <option value="close">Giờ đóng reg sớm nhất</option>
+          <option value="close">Đóng reg sớm nhất</option>
           <option value="start">Giờ bắt đầu</option>
           <option value="buyin">Buy-in thấp → cao</option>
           <option value="gtd">GTD cao → thấp</option>
         </select>
-      </label>
-      <label class="toggle"><input type="checkbox" id="showClosed"> Hiện giải đã đóng reg</label>
-    </div>
-    <div class="frow more">
-      <span class="flabel">Giờ xem</span>
-      <input type="time" id="simTime" aria-label="Xem thử ở giờ khác">
-      <button class="link-btn" id="simReset" hidden>Về giờ thật</button>
-      <span class="sub" style="display:inline">Đổi giờ để xem thử cảnh báo overlay sẽ hiện lúc nào</span>
+        <button class="pill more-btn" id="moreBtn" aria-expanded="false">Thêm ▾</button>
+      </div>
+      <div class="fline more">
+        <label class="toggle">Đóng reg <select id="closeFrom" aria-label="Đóng đăng ký từ giờ"></select> – <select id="closeTo" aria-label="Đóng đăng ký đến giờ"></select></label>
+        <span class="fsep" aria-hidden="true"></span>
+        <label class="toggle"><input type="checkbox" id="showClosed"> Hiện giải đã đóng</label>
+        <span class="fsep" aria-hidden="true"></span>
+        <label class="toggle">Giờ xem thử <input type="time" id="simTime" aria-label="Xem thử ở giờ khác"></label>
+        <button class="link-btn" id="simReset" hidden>Về giờ thật</button>
+      </div>
     </div>
     <div class="demo-note" id="demoNote" hidden></div>
     <div class="summary" id="summary"></div>
@@ -228,7 +239,7 @@ const BUY = [
 ];
 
 // ===== Trạng thái =====
-const state = {day:null, clubs:new Set(), buy:new Set(), closeFrom:"", closeTo:"", sort:"close", showClosed:false, sim:"", demo:true};
+const state = {day:null, clubs:new Set(), buy:"", type:"all", closeFrom:"", closeTo:"", sort:"close", showClosed:false, sim:"", demo:true};
 let real = {};            // entry thật đã gộp: id -> {n, at}
 let fromFile = {}, fromDb = {}, fileUpdatedAt = 0;
 // Gộp hai nguồn: entries.json (script tự động) và số nhập tay (db); lấy số mới hơn
@@ -299,21 +310,23 @@ const DAYS = [...new Set(TOURS.map(t=>t.md))].sort();
 function initFilters(){
   const today = vnParts(Date.now()).md;
   state.day = DAYS.includes(today) ? today : DAYS[0];
-  try { const s = JSON.parse(localStorage.getItem("hnp-filters")||"{}"); if (s.clubs) state.clubs = new Set(s.clubs); if (s.buy) state.buy = new Set(s.buy); if (["close","start","buyin","gtd"].includes(s.sort)) state.sort = s.sort; } catch {}
+  try { const s = JSON.parse(localStorage.getItem("hnp-filters")||"{}"); if (s.clubs) state.clubs = new Set(s.clubs); if (BUY.some(b => b.k === s.buy)) state.buy = s.buy; if (["all","main","sat"].includes(s.type)) state.type = s.type; if (["close","start","buyin","gtd"].includes(s.sort)) state.sort = s.sort; } catch {}
 
   $("days").innerHTML = DAYS.map(md => {
     const [M,D] = md.split("-"); const wd = new Date(Date.UTC(YEAR,M-1,D)).getUTCDay();
-    return `<button class="day" data-day="${md}"><b>${md===today?"Hôm nay":WD[wd]}</b><span>${D}/${M}</span></button>`;
+    return `<button class="day" data-day="${md}"><b>${md===today?"Hôm nay":WD[wd]}</b>${D}/${M}</button>`;
   }).join("");
   $("clubPills").innerHTML = Object.entries(CLUBS).map(([k,c]) => `<button class="pill" data-club="${k}"><span class="dot" style="background:${c.color}"></span>${esc(c.name)}</button>`).join("");
-  $("buyPills").innerHTML = BUY.map(b => `<button class="pill" data-buy="${b.k}">${b.label}</button>`).join("");
+  $("buySel").innerHTML = '<option value="">Mọi buy-in</option>' + BUY.map(b => `<option value="${b.k}">Buy-in ${b.label}</option>`).join("");
+  $("buySel").value = state.buy;
   const hours = ['<option value="">Bất kỳ</option>'].concat(Array.from({length:25},(_,h)=>`<option value="${h}">${String(h).padStart(2,"0")}:00</option>`)).join("");
   $("closeFrom").innerHTML = hours; $("closeTo").innerHTML = hours;
   $("sort").value = state.sort;
 
   $("days").onclick = e => { const b = e.target.closest("[data-day]"); if (!b) return; state.day = b.dataset.day; render(); };
   $("clubPills").onclick = e => { const b = e.target.closest("[data-club]"); if (!b) return; toggleSet(state.clubs, b.dataset.club); save(); render(); };
-  $("buyPills").onclick = e => { const b = e.target.closest("[data-buy]"); if (!b) return; toggleSet(state.buy, b.dataset.buy); save(); render(); };
+  $("buySel").onchange = e => { state.buy = e.target.value; save(); render(); };
+  $("typeSeg").onclick = e => { const b = e.target.closest("[data-type]"); if (!b) return; state.type = b.dataset.type; save(); render(); };
   $("closeFrom").onchange = e => { state.closeFrom = e.target.value; render(); };
   $("closeTo").onchange = e => { state.closeTo = e.target.value; render(); };
   $("sort").onchange = e => { state.sort = e.target.value; save(); render(); };
@@ -326,11 +339,13 @@ function initFilters(){
   $("groups").addEventListener("submit", onEditSubmit);
 }
 const toggleSet = (s, v) => s.has(v) ? s.delete(v) : s.add(v);
-function save(){ try { localStorage.setItem("hnp-filters", JSON.stringify({clubs:[...state.clubs], buy:[...state.buy], sort:state.sort})); } catch {} }
+function save(){ try { localStorage.setItem("hnp-filters", JSON.stringify({clubs:[...state.clubs], buy:state.buy, type:state.type, sort:state.sort})); } catch {} }
 
 function passes(t){
   if (state.clubs.size && !state.clubs.has(t.club)) return false;
-  if (state.buy.size && !BUY.some(b => state.buy.has(b.k) && b.test(t.buyin))) return false;
+  if (state.buy && !BUY.find(b => b.k === state.buy).test(t.buyin)) return false;
+  if (state.type === "sat" && !t.isSat) return false;
+  if (state.type === "main" && t.isSat) return false;
   if (state.closeFrom !== "" || state.closeTo !== "") {
     if (t.closeTs === null) return false;
     const h = (t.closeTs - vnTs(t.md,"00:00")) / HOUR;   // qua nửa đêm thành 24+
@@ -345,7 +360,7 @@ function render(){
   const n = now();
   for (const b of $("days").children) b.setAttribute("aria-pressed", b.dataset.day === state.day);
   for (const b of $("clubPills").children) b.setAttribute("aria-pressed", state.clubs.has(b.dataset.club));
-  for (const b of $("buyPills").children) b.setAttribute("aria-pressed", state.buy.has(b.dataset.buy));
+  for (const b of $("typeSeg").children) b.setAttribute("aria-pressed", b.dataset.type === state.type);
   $("simReset").hidden = !state.sim;
   $("clock").classList.toggle("sim", !!state.sim);
   $("clockLabel").textContent = state.sim ? "Đang xem thử" : "Giờ Hà Nội";
@@ -377,8 +392,9 @@ function render(){
     {k:"closed", title:"Đã đóng đăng ký", items:state.showClosed ? list.filter(x=>x.i.status==="closed").sort(sorter) : []},
   ];
   const closedCount = list.filter(x=>x.i.status==="closed").length;
-  const html = groups.filter(g=>g.items.length).map(g => `<section class="group"><h2>${g.title} <span class="n">${g.items.length}</span></h2><div class="list">${g.items.map(x=>row(x.t,x.i,n)).join("")}</div></section>`).join("");
-  $("groups").innerHTML = html || `<div class="empty">Không có giải nào khớp bộ lọc trong ngày này.${closedCount && !state.showClosed ? ` Có ${closedCount} giải đã đóng reg, bật "Hiện giải đã đóng reg" để xem.` : ""}</div>`;
+  const thead = `<div class="thead"><span>Giờ</span><span>Giải</span><span>Buy-in</span><span>GTD</span><span>Đóng reg</span><span style="text-align:right">Entry</span></div>`;
+  const html = groups.filter(g=>g.items.length).map(g => `<section class="group"><h2>${g.title} <span class="n">${g.items.length}</span></h2><div class="list">${thead}${g.items.map(x=>row(x.t,x.i,n)).join("")}</div></section>`).join("");
+  $("groups").innerHTML = html || `<div class="empty">Không có giải nào khớp bộ lọc trong ngày này.${closedCount && !state.showClosed ? ` Có ${closedCount} giải đã đóng reg, bật "Hiện giải đã đóng" để xem.` : ""}</div>`;
 
   const gtdSum = list.reduce((s,x)=>s+(x.t.gtdNum||0),0);
   $("summary").innerHTML = `<span><b>${list.length}</b> giải trong ngày</span><span><b>${list.filter(x=>x.i.status!=="closed").length}</b> còn đăng ký được</span><span>Tổng GTD <b>${money(gtdSum)}</b></span><span><b>${ov.length}</b> đang overlay</span>${fileUpdatedAt ? `<span>Entry tự cập nhật lúc <b>${String(vnParts(fileUpdatedAt).h).padStart(2,"0")}:${String(vnParts(fileUpdatedAt).m).padStart(2,"0")}</b></span>` : ""}`;
@@ -394,34 +410,37 @@ function render(){
 
 function row(t, i, n){
   const c = CLUBS[t.club];
-  const badge = i.overlay ? `<span class="b b-hot">OVERLAY · thiếu ${i.gap}</span>`
-    : i.status==="open" ? `<span class="b b-open">Đang mở reg</span>`
-    : i.status==="up" ? `<span class="b b-up">Bắt đầu sau ${dur(t.startTs-n)}</span>`
-    : `<span class="b b-closed">Đã đóng reg</span>`;
-  const extra = (t.isSat ? `<span class="b b-sat">Vệ tinh</span>` : "") + (t.flight ? `<span class="b b-sat">Flight · GTD cả giải</span>` : "");
-  const closeLine = t.closeTs === null ? `<b>—</b><em>CLB chưa ghi</em>`
-    : `<b class="num">${t.close}</b><em data-cd="${t.closeTs}" data-cdmode="row">${i.status==="closed" ? "đã đóng" : "còn " + dur(t.closeTs-n)}</em>`;
-  let ent;
+  const badge = i.overlay ? `<span class="b b-hot">OVERLAY −${i.gap}</span>`
+    : i.status==="open" ? `<span class="b b-open">Mở reg</span>`
+    : i.status==="up" ? `<span class="b b-up">Sau ${dur(t.startTs-n)}</span>`
+    : `<span class="b b-closed">Đã đóng</span>`;
+  const extra = (t.isSat ? `<span class="b b-sat">SAT</span>` : "") + (t.flight ? `<span class="b b-sat" title="GTD tính chung cả giải">Flight</span>` : "");
+  const close = t.closeTs === null ? `<b>—</b>`
+    : `<b>${t.close}</b><em>${i.status==="closed" ? "đã đóng" : dur(t.closeTs-n)}</em>`;
+  let ent = "", bar = "";
   if (editing === t.id) {
     ent = `<form class="edit" data-id="${t.id}"><input type="number" min="0" id="ed-${t.id}" value="${real[t.id]?.n ?? ""}" aria-label="Số entry hiện tại" required><button class="link-btn" type="submit">Lưu</button><button class="link-btn" type="button" data-cancel>Hủy</button></form>`;
   } else if (t.needed && i.e) {
     const pct = Math.min(100, i.e.n / t.needed * 100);
-    ent = `<div class="ent-top"><span>Entry${i.e.demo ? " (mẫu)" : ""}</span><b>${i.e.n}/${t.needed}</b></div><div class="bar"><i style="width:${pct}%"></i></div>`
-      + (i.overlay ? `<div class="ent-gap">Bù ~${money(i.ovAmount)}</div>` : i.e.at ? `<div class="ent-na">Cập nhật ${vnParts(i.e.at).h}:${String(vnParts(i.e.at).m).padStart(2,"0")}</div>` : "");
+    const tip = i.e.demo ? "Số mẫu" : i.e.at ? `Cập nhật ${vnParts(i.e.at).h}:${String(vnParts(i.e.at).m).padStart(2,"0")}` : "";
+    ent = (i.overlay ? `<span class="gap">bù ${money(i.ovAmount)}</span>` : "") + `<b title="${tip}">${i.e.n}/${t.needed}${i.e.demo ? "*" : ""}</b>`;
+    bar = `<div class="bar" aria-hidden="true"><i style="width:${pct}%"></i></div>`;
   } else if (t.needed) {
-    ent = `<div class="ent-top"><span>Cần để phủ GTD</span><b>${t.needed}</b></div><div class="ent-na">Chưa có số entry</div>`;
+    ent = `<span class="na">cần ${t.needed}</span>`;
   } else {
-    ent = `<div class="ent-na">${t.isSat ? "Giải vệ tinh, không tính overlay" : "Không có GTD"}</div>`;
+    ent = `<span class="na">—</span>`;
   }
-  if (canWrite && t.needed && editing !== t.id) ent += `<button class="edit-btn" data-edit="${t.id}">Cập nhật entry</button>`;
-  const soon = i.inLastHour ? " soon" : "";
+  if (canWrite && t.needed && editing !== t.id) ent += `<button class="edit-btn" data-edit="${t.id}" title="Cập nhật entry" aria-label="Cập nhật entry">✎</button>`;
   return `<article class="t ${i.status==="closed"?"closed":""} ${i.overlay?"overlay":""}" id="t-${t.id}" style="--club:${c.color}">
-    <div class="t-time"><b>${t.start}</b><span>Bắt đầu</span></div>
-    <div class="t-main"><span class="t-club">${esc(c.name)}</span><div class="t-name">${esc(t.name)}</div><div class="badges">${badge}${extra}</div></div>
-    <div class="stat s-bi"><span>Buy-in</span><b>${money(t.buyin)}</b></div>
-    <div class="stat s-gtd"><span>GTD</span><b>${esc(gtdText(t))}</b></div>
-    <div class="stat close s-close${soon}"><span>Đóng reg</span>${closeLine}</div>
-    <div class="ent">${ent}</div>
+    <div class="t-time">${t.start}</div>
+    <div class="t-main"><div class="t-name" title="${esc(t.name)}"><span class="t-club">${esc(c.name)}</span>${esc(t.name)}</div>${extra}${badge}</div>
+    <div class="meta">
+    <div class="c c-bi" data-l="BI"><b>${money(t.buyin)}</b></div>
+    <div class="c c-gtd" data-l="GTD"><b>${esc(gtdText(t))}</b></div>
+    <div class="c c-close${i.inLastHour ? " soon" : ""}" data-l="Đóng">${close}</div>
+    <div class="c c-ent" data-l="Entry">${ent}</div>
+    </div>
+    ${bar}
   </article>`;
 }
 
