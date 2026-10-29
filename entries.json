@@ -1,1 +1,94 @@
-{"updatedAt":0,"day":null,"entries":{},"log":{}}
+{
+ "updatedAt": 1793264516439,
+ "days": [
+  "10-29"
+ ],
+ "entries": {
+  "arena-10-29-2000-arena-night-25-itm": {
+   "n": 0,
+   "at": 1793264516439
+  },
+  "arena-10-29-1800-hyper-clash": {
+   "n": 0,
+   "at": 1793264516439
+  },
+  "arena-10-29-1700-the-gladiator-dash-25-itm": {
+   "n": 0,
+   "at": 1793264516439
+  },
+  "arena-10-29-1530-satellite-for-the-gladiator-dash": {
+   "n": 11,
+   "at": 1793264516439
+  },
+  "arena-10-29-1400-colosseum-arena-express": {
+   "n": 49,
+   "at": 1793264516439
+  },
+  "arena-10-29-1000-jupiter-thunder": {
+   "n": 124,
+   "at": 1793264516439
+  },
+  "royal-10-29-1100-r-thursday-duke": {
+   "n": 119,
+   "at": 1793264516439
+  },
+  "royal-10-29-1200-r-speed-ii-25-itm": {
+   "n": 17,
+   "at": 1793264516439
+  },
+  "royal-10-29-1400-satellite-credit-2m5": {
+   "n": 16,
+   "at": 1793264516439
+  }
+ },
+ "log": {
+  "arena": {
+   "found": 18,
+   "matched": 6,
+   "unmatched": []
+  },
+  "center": {
+   "found": 21,
+   "matched": 0,
+   "unmatched": [
+    "MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets",
+    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 𝐆𝐑𝐄𝐄𝐍 𝐆𝐄𝐂𝐊𝐎 -  GTD 4 tickets",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries",
+    "LIVE TRAKER"
+   ]
+  },
+  "royal": {
+   "found": 960,
+   "matched": 3,
+   "unmatched": [
+    "R - SPEED I (25% ITM)",
+    "R - THURSDAY DUKE",
+    "R - SPEED II (25% ITM)",
+    "R - SPEED III (25% ITM)",
+    "SATELLITE CREDIT 2M5",
+    "R - SPEED IV (25% ITM)",
+    "R - MINI DEEPSTACK (25% ITM)",
+    "R - RELAX 25% ITM",
+    "R - HAPPY NIGHT (25% ITM)",
+    "#1 - RPT OPENER EVENT - DAY 1A"
+   ]
+  },
+  "gl": {
+   "found": 0,
+   "matched": 0,
+   "unmatched": []
+  },
+  "quads": {
+   "found": 0,
+   "matched": 0,
+   "unmatched": []
+  },
+  "vpl": {
+   "found": 0,
+   "matched": 0,
+   "unmatched": []
+  }
+ }
+}
