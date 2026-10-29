@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "sync": "node sync/sync.mjs",
-    "test": "node --test sync/extract.test.mjs"
+    "test": "node --test sync/extract.test.mjs sync/icm.test.mjs"
   },
   "dependencies": {
     "playwright": "1.48.2"
