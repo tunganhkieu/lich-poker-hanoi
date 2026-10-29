@@ -94,7 +94,7 @@ select,input[type=time],input[type=number]{background:var(--surface);border:1px 
 .group h2{font-family:var(--f-display);font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:0 0 6px;display:flex;gap:8px;align-items:center}
 .group h2 .n{font-family:var(--f-mono);font-size:11px;background:var(--ink);border-radius:6px;padding:1px 6px;color:var(--gold-light)}
 .list{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.thead,.t{display:grid;grid-template-columns:50px minmax(0,1fr) 64px 70px 104px 128px;gap:10px;align-items:center;padding:8px 12px}
+.thead,.t{display:grid;grid-template-columns:50px minmax(0,1fr) 74px 84px 104px 128px;gap:10px;align-items:center;padding:8px 12px}
 .thead{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);background:var(--surface-2);padding-block:6px}
 .t{position:relative;border-top:1px solid var(--line);border-left:3px solid var(--club)}
 .thead + .t{border-top:0}
@@ -118,6 +118,10 @@ select,input[type=time],input[type=number]{background:var(--surface);border:1px 
 .c em{font-style:normal;color:var(--muted);font-size:11px;margin-left:4px}
 .c.soon em{color:var(--hot);font-weight:700}
 .c-ent{display:flex;align-items:center;gap:6px;justify-content:flex-end}
+.c-bi b,.c-gtd b{display:inline-block;font-weight:800;font-size:14px;line-height:1.25;border-radius:6px;padding:2px 7px}
+.c-bi b{background:#fbeccb;color:#6b4a12;box-shadow:inset 0 0 0 1px #ecd29a}
+.c-gtd b{background:var(--ink);color:var(--gold-light)}
+.c-gtd.nogtd b{background:var(--surface-2);color:var(--dim);font-weight:600}
 .c-ent .gap{color:var(--hot);font-size:11px;font-weight:700}
 .c-ent .na{color:var(--dim);font-family:var(--f-body);font-size:11px}
 .bar{position:absolute;left:0;right:0;bottom:0;height:3px;background:transparent}
@@ -154,6 +158,10 @@ select,input[type=time],input[type=number]{background:var(--surface);border:1px 
   .c{font-size:11px;color:var(--muted)}
   .c::before{content:attr(data-l) " ";font-family:var(--f-body);color:var(--dim);font-size:10px}
   .c b{color:var(--fg);font-weight:600}
+  .c.c-bi b{color:#6b4a12;font-weight:800;font-size:12px;padding:1px 6px}
+  .c.c-gtd b{color:var(--gold-light);font-weight:800;font-size:12px;padding:1px 6px}
+  .c.c-gtd.nogtd b{color:var(--dim);font-weight:600}
+  .c-bi,.c-gtd{flex:none}
   .t-name{font-size:13px}
 }
 @media (max-width:360px){.c em{display:none}}
@@ -436,7 +444,7 @@ function row(t, i, n){
     <div class="t-main"><div class="t-name" title="${esc(t.name)}"><span class="t-club">${esc(c.name)}</span>${esc(t.name)}</div>${extra}${badge}</div>
     <div class="meta">
     <div class="c c-bi" data-l="BI"><b>${money(t.buyin)}</b></div>
-    <div class="c c-gtd" data-l="GTD"><b>${esc(gtdText(t))}</b></div>
+    <div class="c c-gtd${t.gtdNum || t.gtd ? "" : " nogtd"}" data-l="GTD"><b>${esc(gtdText(t))}</b></div>
     <div class="c c-close${i.inLastHour ? " soon" : ""}" data-l="Đóng">${close}</div>
     <div class="c c-ent" data-l="Entry">${ent}</div>
     </div>
