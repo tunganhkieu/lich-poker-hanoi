@@ -55,11 +55,15 @@ export function fromRoyalText(text) {
   return out;
 }
 
-/** "2026-10-29T20:00:17" (giờ Hà Nội, không múi giờ) -> mốc tuyệt đối. */
+/**
+ * "2026-10-29T20:00:17" (giờ Hà Nội, không múi giờ) -> mốc tuyệt đối.
+ * Có múi giờ ("...Z" của Royal, "...+00:00" của Beesky) thì đọc đúng múi giờ đó.
+ */
 export function parseStart(s, HNP) {
   if (!s || typeof s !== "string") return null;
   const m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(s);
   if (!m) return null;
+  if (/(Z|[+-]\d{2}:?\d{2})$/.test(s.trim())) { const t = Date.parse(s); return Number.isFinite(t) ? t : null; }
   return Date.UTC(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]) - HNP.VN;
 }
 

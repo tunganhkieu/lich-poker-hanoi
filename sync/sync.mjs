@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 import vm from "node:vm";
 import { chromium } from "playwright";
-import { fromJson, fromRoyalText, match } from "./extract.mjs";
+import { fromJson, fromRoyalText, match, parseStart } from "./extract.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const OUT = path.join(ROOT, "entries.json");
@@ -79,7 +79,8 @@ async function main() {
         Object.assign(result, r.result);
         left = left.filter(f => r.unmatched.includes(f.name));
       }
-      const unmatched = left.map(f => f.name);
+      // Chỉ báo mục chưa ghép thuộc những ngày đang xét (Royal trả cả lịch sử nhiều ngày)
+      const unmatched = left.filter(f => { const st = parseStart(f.start, HNP); return st === null || days.includes(HNP.vnParts(st).md); }).map(f => f.name);
       for (const [id, n] of Object.entries(result)) entries[id] = { n, at: now };
       log[site.club] = { found: found.length, matched: Object.keys(result).length, unmatched: [...new Set(unmatched)].slice(0, 10) };
     } catch (e) {

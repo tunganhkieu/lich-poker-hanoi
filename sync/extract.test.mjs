@@ -60,6 +60,31 @@ test("match không đoán khi trùng tên mà thiếu giờ bắt đầu", () =>
   assert.equal(two.unmatched.length, 1);
 });
 
+test("match đọc giờ UTC của Royal (startTime có Z) và không ghép giải cùng tên ngày khác", () => {
+  const found = fromJson({ data: [
+    { name: "R - SPEED I (25% ITM)", totalEntry: 16, startTime: "2026-10-29T03:30:00.000Z" },
+    { name: "R - SPEED I (25% ITM)", totalEntry: 40, startTime: "2026-10-28T03:30:00.000Z" },
+  ] });
+  const { result } = match(found, tours, "royal", "10-29", HNP);
+  assert.deepEqual(result, { "royal-10-29-1030-r-speed-i-25-itm": 16 });
+});
+
+test("Center: chữ in đậm Unicode và đuôi GTD vẫn ghép đúng", () => {
+  const found = fromJson({ data: [
+    { TenGD: " \u{1D402}\u{1D404}\u{1D40D}\u{1D413}\u{1D404}\u{1D411}-\u{1D40F} \u{1D406}\u{1D411}\u{1D404}\u{1D404}\u{1D40D} \u{1D406}\u{1D404}\u{1D402}\u{1D40A}\u{1D40E} – \u{1D406}\u{1D413}\u{1D403} \u{1D7CF}\u{1D7CE}\u{1D7CE} \u{1D404}\u{1D40D}\u{1D413}\u{1D411}\u{1D408}\u{1D404}\u{1D412}", TotalEntry: 90, ThoiGianBD: "2026-10-29T11:00:12" },
+    { TenGD: "CenterP Daily - GTD 100 Entries", TotalEntry: 53, ThoiGianBD: "2026-10-29T15:00:01" },
+    { TenGD: " MINI HIGHROLLER - GTD 30 ENTRIES", TotalEntry: 4, ThoiGianBD: "2026-10-29T17:00:01" },
+    { tour_name: "x", TenGD: "LIVE TRAKER", TotalEntry: 0, start_at: "2026-10-29T02:25:22+00:00" },
+  ] });
+  const { result, unmatched } = match(found, tours, "center", "10-29", HNP);
+  assert.deepEqual(result, {
+    "center-10-29-1100-center-p-green-gecko": 90,
+    "center-10-29-1500-centerp-daily": 53,
+    "center-10-29-1700-mini-highroller": 4,
+  });
+  assert.deepEqual(unmatched, ["LIVE TRAKER"]);
+});
+
 test("fromRoyalText tách đúng tên khi có hai thẻ LIVE", () => {
   const text = "LIVE NOW\n2\n29 OCT | 10:30 AM\nR - SPEED I (25% ITM)\nBREAK 1\n300/500/500\nPLAYERS\n20/31\nREG CLOSES IN\n00:10:00\nVIEW DETAILS\nPLAYERS\n12/14";
   assert.deepEqual(fromRoyalText(text), [{ name: "R - SPEED I (25% ITM)", n: 31, start: null }]);

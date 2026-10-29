@@ -56,16 +56,21 @@ const RAW = {
     ["11-01","20:30","S19 Satellite: Main Event",2000,"1 vé","22:04"],
     ["11-01","21:30","#25 Turbo NLH (20% ITM)",2300,20000,"23:40"],
   ],
-  center:[],
+  center:[
+    ["10-29","10:30","Satellite for Green Gecko",360,"4 vé",null],
+    ["10-29","10:30","CenterP Morning Deepstack",854,70000,null,100],
+    ["10-29","11:00","Center-P Green Gecko",2330,200000,"17:33",100],
+    ["10-29","14:00","CenterP Satellite for Mini Highroller",650,"4 vé",null],
+    ["10-29","15:00","CenterP Daily",854,70000,"19:30",100],
+    ["10-29","17:00","Mini Highroller",3330,81900,"21:15",30],
+    ["10-29","19:00","CenterP Fast & Furious",732,60000,"22:20",100],
+  ],
   royal:[
-    ["10-29","10:30","R - Speed I (25% ITM)",1220,14550,"12:00"],
-    ["10-29","10:30","R - Happy Morning",610,67900,"15:30"],
-    ["10-29","11:00","R - Thursday Duke",1220,194000,"17:38"],
-    ["10-29","12:00","R - Speed II (25% ITM)",1830,19400,"13:30"],
-    ["10-29","13:30","R - Speed III (25% ITM)",2330,29100,"15:00"],
+    ["10-29","10:30","R - Speed I (25% ITM)",1220,10000,"12:00"],
+    ["10-29","11:00","R - Thursday Duke",976,80000,"17:38"],
+    ["10-29","12:00","R - Speed II (25% ITM)",1830,15000,"13:30"],
+    ["10-29","13:30","R - Speed III (25% ITM)",2330,20000,"15:00"],
     ["10-29","14:00","Satellite Credit 2M5",508,"2 vé","15:34"],
-    ["10-29","15:00","R - Speed IV (25% ITM)",1525,12500,null],
-    ["10-29","15:30","R - Deepstack Turbo",732,60000,"20:00"],
     ["10-29","17:30","R - Mini Deepstack (25% ITM)",2330,60000,"21:35"],
     ["10-29","21:30","R - Relax (25% ITM)",1830,15000,"23:38"],
     ["10-29","23:30","R - Happy Night (25% ITM)",2330,12000,"00:40"],
@@ -145,10 +150,11 @@ const YEAR = 2026, FEE = 1.22, HOUR = 3600e3, VN = 7*HOUR;
 // Giờ Hà Nội -> mốc thời gian tuyệt đối
 const vnTs = (md, hm) => { const [M,D]=md.split("-").map(Number), [h,m]=hm.split(":").map(Number); return Date.UTC(YEAR,M-1,D,h,m) - VN; };
 const vnParts = ts => { const d=new Date(ts+VN); return {md:String(d.getUTCMonth()+1).padStart(2,"0")+"-"+String(d.getUTCDate()).padStart(2,"0"), h:d.getUTCHours(), m:d.getUTCMinutes(), s:d.getUTCSeconds(), wd:d.getUTCDay()}; };
-const fold = s => String(s).toLowerCase().normalize("NFD").replace(/\p{M}/gu,"").replace(new RegExp(String.fromCharCode(273),"g"),"d");
+// NFKD: đổi cả chữ in đậm kiểu Unicode (𝐆𝐑𝐄𝐄𝐍 của Center) về chữ thường
+const fold = s => String(s).normalize("NFKD").toLowerCase().normalize("NFD").replace(/\p{M}/gu,"").replace(new RegExp(String.fromCharCode(273),"g"),"d");
 const slug = s => fold(s).replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"").slice(0,48);
-// Tên dùng để ghép với dữ liệu CLB: bỏ dấu, bỏ tiền tố "R - ", chỉ giữ chữ và số
-const normName = s => fold(s).replace(/^r\s*-\s*/,"").replace(/[^a-z0-9]/g,"");
+// Tên dùng để ghép với dữ liệu CLB: bỏ dấu, bỏ tiền tố "R - ", bỏ đuôi " - GTD 100 Entries", chỉ giữ chữ và số
+const normName = s => fold(s).trim().replace(/^r\s*-\s*/,"").replace(/\s+\W*\s*gtd\b.*$/,"").replace(/[^a-z0-9]/g,"");
 
 function buildTours(){
   const tours = [];
