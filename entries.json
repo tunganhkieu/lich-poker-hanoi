@@ -1,5 +1,5 @@
 {
- "updatedAt": 1793307865616,
+ "updatedAt": 1793351376204,
  "days": [
   "10-30"
  ],
@@ -91,7 +91,7 @@
  },
  "log": {
   "arena": {
-   "found": 16,
+   "found": 18,
    "matched": 0,
    "unmatched": [
     "ARENA NIGHT (25% ITM)",
@@ -103,9 +103,16 @@
    ]
   },
   "center": {
-   "found": 0,
+   "found": 12,
    "matched": 0,
-   "unmatched": []
+   "unmatched": [
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets",
+    "CTP- BLUE BADGER- LIVESTREAM- GTD 100 ENTRIES",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries",
+    "CenterP Satellite For BLUE BADGER -  GTD 4 tickets"
+   ]
   },
   "royal": {
    "found": 947,
