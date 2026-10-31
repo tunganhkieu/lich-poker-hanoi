@@ -1,5 +1,5 @@
 {
- "updatedAt": 1793391311467,
+ "updatedAt": 1793437226854,
  "days": [
   "10-31"
  ],
@@ -104,19 +104,23 @@
    ]
   },
   "center": {
-   "found": 6,
+   "found": 12,
    "matched": 0,
    "unmatched": [
-    "TOUR NAVI NIGHTHAWK STACK 50K",
-    "CenterP MORNING DEEPSTACK - GTD 100 Entries",
-    "CenterP Satellite For NAVI NIGHTHAWK -  GTD 4 tickets"
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets",
+    "𝐂𝐄𝐍𝐓𝐄𝐑-𝐏 𝐍𝐀𝐕𝐈 𝐍𝐈𝐆𝐇𝐓𝐇𝐀𝐖𝐊 – 𝐆𝐓𝐃 𝟏𝟎𝟎 𝐄𝐍𝐓𝐑𝐈𝐄𝐒 - LIVE STREAM",
+    "CenterP Satellite For NAVI NIGHTHAWK -  GTD 4 tickets",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
    ]
   },
   "royal": {
    "found": 949,
    "matched": 0,
    "unmatched": [
-    "TEST"
+    "Test Tour",
+    "TEST TOUR"
    ]
   },
   "gl": {
