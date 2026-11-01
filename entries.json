@@ -1,7 +1,6 @@
 {
- "updatedAt": 1793474664185,
+ "updatedAt": 1793526626915,
  "days": [
-  "10-31",
   "11-01"
  ],
  "entries": {},
@@ -15,19 +14,25 @@
     "THE GLADIATOR DASH (25%ITM)",
     "SATELLITE FOR THE GLADIATOR DASH",
     "COLOSSEUM ARENA EXPRESS",
-    "LUNA CLASH"
+    "SOLINVICTUS"
    ]
   },
   "center": {
-   "found": 0,
-   "matched": 0,
-   "unmatched": []
-  },
-  "royal": {
-   "found": 949,
+   "found": 12,
    "matched": 0,
    "unmatched": [
-    "Test Tour",
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HR -  GTD 4 tickets",
+    "𝐂𝐄𝐍𝐓𝐄𝐑-𝐏 𝐕𝐈𝐎𝐋𝐄𝐓 𝐕𝐈𝐏𝐄𝐑 – 𝐆𝐓𝐃 𝟏𝟎𝟎 𝐄𝐍𝐓𝐑𝐈𝐄𝐒 - LIVE STREAM",
+    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 𝐕𝐈𝐎𝐋𝐄𝐓 𝐕𝐈𝐏𝐄𝐑 -  GTD 4 tickets",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
+   ]
+  },
+  "royal": {
+   "found": 948,
+   "matched": 0,
+   "unmatched": [
     "PAUSED"
    ]
   },
