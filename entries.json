@@ -1,5 +1,5 @@
 {
- "updatedAt": 1793565769847,
+ "updatedAt": 1793614257282,
  "days": [
   "11-02"
  ],
@@ -11,22 +11,38 @@
    "unmatched": [
     "ARENA NIGHT (25% ITM)",
     "HYPER CLASH",
-    "THE GLADIATOR DASH (25%ITM)",
+    "THE GLADIATOR DASH (15%ITM)",
     "SATELLITE FOR THE GLADIATOR DASH 1IN6",
     "COLOSSEUM ARENA EXPRESS",
     "LUNA CLASH"
    ]
   },
   "center": {
-   "found": 0,
-   "matched": 0,
-   "unmatched": []
-  },
-  "royal": {
-   "found": 948,
+   "found": 12,
    "matched": 0,
    "unmatched": [
-    "PAUSED"
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HR -  GTD 4 tickets",
+    "CTP SCARLET SNAKE- GTD 100 ENTRIES",
+    "CenterP Satellite For SCARLET SNAKE -  GTD 4 tickets",
+    "MORNING DEEPSTACK- GTD 100 ENTRIES"
+   ]
+  },
+  "royal": {
+   "found": 958,
+   "matched": 0,
+   "unmatched": [
+    "SATELLITE FOR MONDAY BARON",
+    "R - HAPPY MORNING",
+    "R - MONDAY BARON",
+    "R - SPEED I (25% ITM)",
+    "R - SPEED II (25% ITM)",
+    "SATELLITE CREDIT 2M5",
+    "R - SPEED III (25% ITM)",
+    "Super Test Tour RPT HRL Series GTD 200M",
+    "R - DEEPSTACK TURBO",
+    "R - MINI DEEPSTACK (25% ITM)"
    ]
   },
   "gl": {
