@@ -1,4 +1,4 @@
-// Chạy: node --test sync/
+// Chạy: node --test sync/  (dùng bản lịch 29/10 cố định trong fixtures/ để test không đổi theo lịch tuần)
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -6,7 +6,7 @@ import vm from "node:vm";
 import { fromJson, fromRoyalText, match } from "./extract.mjs";
 
 const ctx = {}; ctx.globalThis = ctx;
-vm.runInNewContext(readFileSync(new URL("../schedule.js", import.meta.url), "utf8"), ctx);
+vm.runInNewContext(readFileSync(new URL("./fixtures/schedule-2910.js", import.meta.url), "utf8"), ctx);
 const HNP = ctx.HNP, tours = HNP.buildTours();
 
 // Mẫu thật từ arenapoker.vn ngày 29/10 (get-listhomnay), đổi số entry để test
