@@ -1,7 +1,8 @@
 {
- "updatedAt": 1793700773413,
+ "updatedAt": 1793728178233,
  "days": [
-  "11-03"
+  "11-03",
+  "11-04"
  ],
  "entries": {
   "arena-11-03-2000-arena-night-25-itm": {
@@ -23,43 +24,44 @@
   "arena-11-03-1000-main-mars-battlefround": {
    "n": 141,
    "at": 1793700773413
+  },
+  "arena-11-04-0930-satellite-for-mercury-speedway-1in6": {
+   "n": 0,
+   "at": 1793728178233
   }
  },
  "log": {
   "arena": {
-   "found": 18,
-   "matched": 5,
+   "found": 20,
+   "matched": 1,
    "unmatched": [
-    "THE GLADIATOR DASH (15%ITM)"
+    "ARENA NIGHT (25% ITM)",
+    "HYPER CLASH",
+    "THE GLADIATOR DASH (15%ITM)",
+    "SATELLITE FOR THE GLADIATOR DASH 1IN6",
+    "COLOSSEUM ARENA EXPRESS",
+    "[MAIN] MERCURY SPEEDWAY"
    ]
   },
   "center": {
-   "found": 14,
+   "found": 0,
    "matched": 0,
-   "unmatched": [
-    "CenterP Fast & Furious - GTD 100 Entries",
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HIGHROLLER-  GTD 4 tickets",
-    "CenterP MAIN EVENT 4.5- GTD 80 ENTRIES",
-    "CenterP Satellite For MAIN EVENT  -  GTD 4 tickets",
-    "CenterP ORANGE OKAPI - GTD 100 Entries"
-   ]
+   "unmatched": []
   },
   "royal": {
-   "found": 966,
+   "found": 974,
    "matched": 0,
    "unmatched": [
-    "SATELLITE FOR TUESDAY KNIGHT",
     "R - HAPPY MORNING",
-    "R - TUESDAY KNIGHT",
     "R - SPEED I (25% ITM)",
     "R - SPEED II (25% ITM)",
-    "SATELLITE CREDIT 2M5",
     "R - SPEED III (25% ITM)",
     "R - DEEPSTACK TURBO",
     "R - MINI DEEPSTACK (25% ITM)",
-    "R - RELAX 25% ITM"
+    "R - RELAX 25% ITM",
+    "R - HAPPY NIGHT (25% ITM)",
+    "SATELLITE FOR WEDNESDAY CASTLE",
+    "R - WEDNESDAY CASTLE (Live)"
    ]
   },
   "gl": {
