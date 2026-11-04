@@ -1,7 +1,6 @@
 {
- "updatedAt": 1793728178233,
+ "updatedAt": 1793786526612,
  "days": [
-  "11-03",
   "11-04"
  ],
  "entries": {
@@ -26,8 +25,8 @@
    "at": 1793700773413
   },
   "arena-11-04-0930-satellite-for-mercury-speedway-1in6": {
-   "n": 0,
-   "at": 1793728178233
+   "n": 42,
+   "at": 1793786526612
   }
  },
  "log": {
@@ -44,24 +43,31 @@
    ]
   },
   "center": {
-   "found": 0,
-   "matched": 0,
-   "unmatched": []
-  },
-  "royal": {
-   "found": 974,
+   "found": 12,
    "matched": 0,
    "unmatched": [
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets",
+    "CTP- YELLOW YETI- GTD 100 ENTRIES",
+    "CenterP Satellite For YELLOW YETI -  GTD 4 tickets",
+    "MORNING DEEPSTACK- GTD 100 ENTRIES"
+   ]
+  },
+  "royal": {
+   "found": 958,
+   "matched": 0,
+   "unmatched": [
+    "SATELLITE FOR WEDNESDAY CASTLE",
     "R - HAPPY MORNING",
+    "R - WEDNESDAY CASTLE (Live)",
     "R - SPEED I (25% ITM)",
     "R - SPEED II (25% ITM)",
+    "SATELLITE CREDIT 2M5",
     "R - SPEED III (25% ITM)",
+    "Super Tiger Tour RPT HRL Series GTD 200M",
     "R - DEEPSTACK TURBO",
-    "R - MINI DEEPSTACK (25% ITM)",
-    "R - RELAX 25% ITM",
-    "R - HAPPY NIGHT (25% ITM)",
-    "SATELLITE FOR WEDNESDAY CASTLE",
-    "R - WEDNESDAY CASTLE (Live)"
+    "R - MINI DEEPSTACK (25% ITM)"
    ]
   },
   "gl": {
