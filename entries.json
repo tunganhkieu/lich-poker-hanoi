@@ -1,29 +1,10 @@
 {
- "updatedAt": 1793872719315,
+ "updatedAt": 1793901049824,
  "days": [
-  "11-05"
+  "11-05",
+  "11-06"
  ],
  "entries": {
-  "arena-11-03-2000-arena-night-25-itm": {
-   "n": 0,
-   "at": 1793700773413
-  },
-  "arena-11-03-1800-hyper-clash": {
-   "n": 0,
-   "at": 1793700773413
-  },
-  "arena-11-03-1530-satellite-for-the-gladiator-dash-1in6": {
-   "n": 49,
-   "at": 1793700773413
-  },
-  "arena-11-03-1400-colosseum-arena-express": {
-   "n": 106,
-   "at": 1793700773413
-  },
-  "arena-11-03-1000-main-mars-battlefround": {
-   "n": 141,
-   "at": 1793700773413
-  },
   "arena-11-04-0930-satellite-for-mercury-speedway-1in6": {
    "n": 42,
    "at": 1793786526612
@@ -39,6 +20,18 @@
   "arena-11-05-0930-satellite-for-arena-of-glory-multiday-1in6": {
    "n": 64,
    "at": 1793872719315
+  },
+  "arena-11-06-1600-arena-of-glory-multiday-day-1d": {
+   "n": 0,
+   "at": 1793901049824
+  },
+  "arena-11-06-1000-arena-of-glory-multiday-day-1c": {
+   "n": 0,
+   "at": 1793901049824
+  },
+  "arena-11-06-0930-satellite-for-arena-of-glory-multiday-1in6": {
+   "n": 0,
+   "at": 1793901049824
   }
  },
  "log": {
@@ -52,31 +45,24 @@
    ]
   },
   "center": {
-   "found": 12,
+   "found": 0,
    "matched": 0,
-   "unmatched": [
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HR -  GTD 4 tickets",
-    "𝗖𝗘𝗡𝗧𝗘𝗥-𝗣 𝗠𝗔𝗜𝗡 𝗘𝗩𝗘𝗡𝗧 𝟰.𝟱 - GTD 80 Entries",
-    "𝗦𝗔𝗧𝗘𝗟𝗟𝗜𝗧𝗘 𝗙𝗢𝗥 𝗠𝗔𝗜𝗡 𝗘𝗩𝗘𝗡𝗧 𝟰.𝟱 -  GTD 4 tickets",
-    "𝗖𝗘𝗡𝗧𝗘𝗥-𝗣 𝗚𝗥𝗘𝗘𝗡 𝗚𝗘𝗖𝗞𝗢 - GTD 100 Entries"
-   ]
+   "unmatched": []
   },
   "royal": {
-   "found": 966,
+   "found": 973,
    "matched": 0,
    "unmatched": [
-    "SATELLITE FOR BILLIONAIRE MAKER",
-    "R - THURSDAY DUKE",
-    "BILLIONAIRE MAKER (8-MAX)",
     "R - SPEED I (25% ITM)",
     "R - SPEED II (25% ITM)",
-    "SATELLITE CREDIT 2M5",
-    "R - SPEED III (25% ITM)",
     "Super Tiger Tour RPT HRL Series GTD 200M",
+    "R - SPEED III (25% ITM)",
     "R - DEEPSTACK TURBO",
-    "R - MINI DEEPSTACK (25% ITM)"
+    "R - MINI DEEPSTACK (25% ITM)",
+    "R - RELAX 25% ITM",
+    "R - HAPPY NIGHT (25% ITM)",
+    "SATELLITE FOR FRIDAY VISCOUNT",
+    "R - HAPPY MORNING"
    ]
   },
   "gl": {
