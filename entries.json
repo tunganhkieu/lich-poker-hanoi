@@ -1,13 +1,10 @@
 {
- "updatedAt": 1793959282381,
+ "updatedAt": 1793986039787,
  "days": [
-  "11-06"
+  "11-06",
+  "11-07"
  ],
  "entries": {
-  "arena-11-04-0930-satellite-for-mercury-speedway-1in6": {
-   "n": 42,
-   "at": 1793786526612
-  },
   "arena-11-05-1600-arena-of-glory-multiday-day-1b": {
    "n": 49,
    "at": 1793872719315
@@ -31,6 +28,18 @@
   "arena-11-06-0930-satellite-for-arena-of-glory-multiday-1in6": {
    "n": 70,
    "at": 1793959282381
+  },
+  "arena-11-07-1600-arena-of-glory-multiday-day-1f": {
+   "n": 0,
+   "at": 1793986039787
+  },
+  "arena-11-07-1000-arena-of-glory-multiday-day-1e": {
+   "n": 0,
+   "at": 1793986039787
+  },
+  "arena-11-07-0930-satellite-for-arena-of-glory-multiday-1in6": {
+   "n": 0,
+   "at": 1793986039787
   }
  },
  "log": {
@@ -39,36 +48,29 @@
    "matched": 3,
    "unmatched": [
     "ARENA NIGHT (25% ITM)",
-    "HYPER CLASH",
+    "HYPER CLASH - HỦY",
     "COLOSSEUM ARENA EXPRESS"
    ]
   },
   "center": {
-   "found": 12,
+   "found": 0,
    "matched": 0,
-   "unmatched": [
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For 𝗠𝗜𝗡𝗜 𝗛𝗜𝗚𝗛 𝗥𝗢𝗟𝗟𝗘𝗥 -  GTD 4 tickets",
-    "𝗖𝗘𝗡𝗧𝗘𝗥-𝗣 𝗕𝗟𝗨𝗘 𝗕𝗔𝗗𝗚𝗘𝗥 - GTD: 100 ENTRIES",
-    "CenterP MORNING DEEPSTACK - GTD 100 Entries",
-    "𝗦𝗔𝗧𝗘𝗟𝗟𝗜𝗧𝗘 𝗙𝗢𝗥 𝗕𝗟𝗨𝗘 𝗕𝗔𝗗𝗚𝗘𝗥 -  GTD 4 tickets"
-   ]
+   "unmatched": []
   },
   "royal": {
-   "found": 973,
+   "found": 976,
    "matched": 0,
    "unmatched": [
-    "SATELLITE FOR FRIDAY VISCOUNT",
     "R - HAPPY MORNING",
-    "R - FRIDAY VISCOUNT (LIVE)",
     "R - SPEED I (25% ITM)",
     "R - SPEED II (25% ITM)",
-    "SATELLITE CREDIT 2M5",
     "Super Tiger Tour RPT HRL Series GTD 200M",
     "R - SPEED III (25% ITM)",
     "R - DEEPSTACK TURBO",
-    "R - MINI DEEPSTACK (25% ITM)"
+    "R - MINI DEEPSTACK (25% ITM)",
+    "R - RELAX 25% ITM",
+    "R - HAPPY NIGHT (25% ITM)",
+    "SATELLITE SPECIAL TOURNAMENT"
    ]
   },
   "gl": {
