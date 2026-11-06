@@ -1,7 +1,6 @@
 {
- "updatedAt": 1793986039787,
+ "updatedAt": 1794003274549,
  "days": [
-  "11-06",
   "11-07"
  ],
  "entries": {
@@ -31,15 +30,15 @@
   },
   "arena-11-07-1600-arena-of-glory-multiday-day-1f": {
    "n": 0,
-   "at": 1793986039787
+   "at": 1794003274549
   },
   "arena-11-07-1000-arena-of-glory-multiday-day-1e": {
    "n": 0,
-   "at": 1793986039787
+   "at": 1794003274549
   },
   "arena-11-07-0930-satellite-for-arena-of-glory-multiday-1in6": {
    "n": 0,
-   "at": 1793986039787
+   "at": 1794003274549
   }
  },
  "log": {
@@ -53,24 +52,24 @@
    ]
   },
   "center": {
-   "found": 0,
+   "found": 6,
    "matched": 0,
-   "unmatched": []
+   "unmatched": [
+    "CENTER-P NAVI NIGHTHAWK - LIVE STREAM",
+    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 NAVI NIGHTHAWK -  GTD 4 tickets",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
+   ]
   },
   "royal": {
    "found": 976,
    "matched": 0,
    "unmatched": [
-    "R - HAPPY MORNING",
-    "R - SPEED I (25% ITM)",
-    "R - SPEED II (25% ITM)",
-    "Super Tiger Tour RPT HRL Series GTD 200M",
-    "R - SPEED III (25% ITM)",
-    "R - DEEPSTACK TURBO",
+    "SATELLITE SPECIAL TOURNAMENT",
+    "R - SPECIAL TOURNAMENT",
     "R - MINI DEEPSTACK (25% ITM)",
+    "R - MINI HIGH ROLLER",
     "R - RELAX 25% ITM",
-    "R - HAPPY NIGHT (25% ITM)",
-    "SATELLITE SPECIAL TOURNAMENT"
+    "R - HAPPY NIGHT (25% ITM)"
    ]
   },
   "gl": {
