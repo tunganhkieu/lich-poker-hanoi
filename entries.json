@@ -1,7 +1,6 @@
 {
- "updatedAt": 1793901049824,
+ "updatedAt": 1793959282381,
  "days": [
-  "11-05",
   "11-06"
  ],
  "entries": {
@@ -22,16 +21,16 @@
    "at": 1793872719315
   },
   "arena-11-06-1600-arena-of-glory-multiday-day-1d": {
-   "n": 0,
-   "at": 1793901049824
+   "n": 50,
+   "at": 1793959282381
   },
   "arena-11-06-1000-arena-of-glory-multiday-day-1c": {
-   "n": 0,
-   "at": 1793901049824
+   "n": 256,
+   "at": 1793959282381
   },
   "arena-11-06-0930-satellite-for-arena-of-glory-multiday-1in6": {
-   "n": 0,
-   "at": 1793901049824
+   "n": 70,
+   "at": 1793959282381
   }
  },
  "log": {
@@ -45,24 +44,31 @@
    ]
   },
   "center": {
-   "found": 0,
+   "found": 12,
    "matched": 0,
-   "unmatched": []
+   "unmatched": [
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For 𝗠𝗜𝗡𝗜 𝗛𝗜𝗚𝗛 𝗥𝗢𝗟𝗟𝗘𝗥 -  GTD 4 tickets",
+    "𝗖𝗘𝗡𝗧𝗘𝗥-𝗣 𝗕𝗟𝗨𝗘 𝗕𝗔𝗗𝗚𝗘𝗥 - GTD: 100 ENTRIES",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries",
+    "𝗦𝗔𝗧𝗘𝗟𝗟𝗜𝗧𝗘 𝗙𝗢𝗥 𝗕𝗟𝗨𝗘 𝗕𝗔𝗗𝗚𝗘𝗥 -  GTD 4 tickets"
+   ]
   },
   "royal": {
    "found": 973,
    "matched": 0,
    "unmatched": [
+    "SATELLITE FOR FRIDAY VISCOUNT",
+    "R - HAPPY MORNING",
+    "R - FRIDAY VISCOUNT (LIVE)",
     "R - SPEED I (25% ITM)",
     "R - SPEED II (25% ITM)",
+    "SATELLITE CREDIT 2M5",
     "Super Tiger Tour RPT HRL Series GTD 200M",
     "R - SPEED III (25% ITM)",
     "R - DEEPSTACK TURBO",
-    "R - MINI DEEPSTACK (25% ITM)",
-    "R - RELAX 25% ITM",
-    "R - HAPPY NIGHT (25% ITM)",
-    "SATELLITE FOR FRIDAY VISCOUNT",
-    "R - HAPPY MORNING"
+    "R - MINI DEEPSTACK (25% ITM)"
    ]
   },
   "gl": {
