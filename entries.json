@@ -1,7 +1,6 @@
 {
- "updatedAt": 1794080551487,
+ "updatedAt": 1794130772479,
  "days": [
-  "11-07",
   "11-08"
  ],
  "entries": {
@@ -45,9 +44,16 @@
    ]
   },
   "center": {
-   "found": 0,
+   "found": 12,
    "matched": 0,
-   "unmatched": []
+   "unmatched": [
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For  𝐌𝐈𝐍𝐈 𝐇𝐈𝐆𝐇 𝐑𝐎𝐋𝐋𝐄𝐑-  GTD 4 tickets",
+    "CTP VIOLET VIPER- GTD 100 ENTRIES",
+    "CenterP Satellite For VIOLET VIPER -  GTD 4 tickets",
+    "MORNING DEEPSTACK- GTD 100 ENTRIES"
+   ]
   },
   "royal": {
    "found": 982,
