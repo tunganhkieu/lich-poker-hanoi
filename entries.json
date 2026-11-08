@@ -1,7 +1,7 @@
 {
- "updatedAt": 1794154667842,
+ "updatedAt": 1794170325233,
  "days": [
-  "11-08"
+  "11-09"
  ],
  "entries": {
   "arena-11-07-1600-arena-of-glory-multiday-day-1f": {
@@ -22,43 +22,23 @@
    "found": 18,
    "matched": 0,
    "unmatched": [
-    "ARENA NIGHT (25% ITM)",
+    "ARENA NIGHT (15% ITM)",
     "HYPER CLASH",
     "THE GLADIATOR DASH (15%ITM)",
+    "SATELLITE FOR THE GLADIATOR DASH 1IN6",
     "COLOSSEUM ARENA EXPRESS",
-    "ARENA OF GLORY MULTIDAY - DAY 2",
-    "[MAIN] SOLINVICTUS"
+    "[MAIN] LUNA CLASH"
    ]
   },
   "center": {
-   "found": 16,
+   "found": 0,
    "matched": 0,
-   "unmatched": [
-    "CenterP Evening DeepStack Turbo - GTD 10 Entries",
-    "CenterP Fast & Furious - GTD 100 Entries",
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For  𝐌𝐈𝐍𝐈 𝐇𝐈𝐆𝐇 𝐑𝐎𝐋𝐋𝐄𝐑-  GTD 4 tickets",
-    "CTP VIOLET VIPER- GTD 100 ENTRIES",
-    "CenterP Satellite For VIOLET VIPER -  GTD 4 tickets",
-    "MORNING DEEPSTACK- GTD 100 ENTRIES"
-   ]
+   "unmatched": []
   },
   "royal": {
-   "found": 982,
+   "found": 970,
    "matched": 0,
-   "unmatched": [
-    "SATELLITE FOR SUNDAY MARQUESS",
-    "R - HAPPY MORNING",
-    "R - SUNDAY MARQUESS",
-    "R - SPECIAL TOURNAMENT FINAL DAY",
-    "R - SPEED I (25% ITM)",
-    "R - SPEED II (25% ITM)",
-    "SATELLITE CREDIT 2M5",
-    "R - SPEED III (25% ITM)",
-    "R - DEEPSTACK TURBO",
-    "R - MINI DEEPSTACK (25% ITM)"
-   ]
+   "unmatched": []
   },
   "gl": {
    "found": 0,
