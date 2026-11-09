@@ -1,5 +1,5 @@
 {
- "updatedAt": 1794170325233,
+ "updatedAt": 1794220230210,
  "days": [
   "11-09"
  ],
@@ -31,9 +31,16 @@
    ]
   },
   "center": {
-   "found": 0,
+   "found": 12,
    "matched": 0,
-   "unmatched": []
+   "unmatched": [
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HIGH ROLLER -  GTD 4 tickets",
+    "𝐂𝐄𝐍𝐓𝐄𝐑-𝐏 𝐒𝐂𝐀𝐑𝐋𝐄𝐓 𝐒𝐍𝐀𝐊𝐄 🔴 LIVE STREAM - GTD 100 ENTRIES",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries",
+    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 𝐒𝐂𝐀𝐑𝐋𝐄𝐓 𝐒𝐍𝐀𝐊𝐄 -  GTD 4 tickets"
+   ]
   },
   "royal": {
    "found": 970,
