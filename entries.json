@@ -1,22 +1,9 @@
 {
- "updatedAt": 1794220230210,
+ "updatedAt": 1794258226440,
  "days": [
-  "11-09"
+  "11-10"
  ],
- "entries": {
-  "arena-11-07-1600-arena-of-glory-multiday-day-1f": {
-   "n": 219,
-   "at": 1794066502358
-  },
-  "arena-11-07-1000-arena-of-glory-multiday-day-1e": {
-   "n": 0,
-   "at": 1794066502358
-  },
-  "arena-11-07-0930-satellite-for-arena-of-glory-multiday-1in6": {
-   "n": 60,
-   "at": 1794066502358
-  }
- },
+ "entries": {},
  "log": {
   "arena": {
    "found": 18,
@@ -27,25 +14,29 @@
     "THE GLADIATOR DASH (15%ITM)",
     "SATELLITE FOR THE GLADIATOR DASH 1IN6",
     "COLOSSEUM ARENA EXPRESS",
-    "[MAIN] LUNA CLASH"
+    "[MAIN] MARS BATTLEFROUND"
    ]
   },
   "center": {
-   "found": 12,
-   "matched": 0,
-   "unmatched": [
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HIGH ROLLER -  GTD 4 tickets",
-    "𝐂𝐄𝐍𝐓𝐄𝐑-𝐏 𝐒𝐂𝐀𝐑𝐋𝐄𝐓 𝐒𝐍𝐀𝐊𝐄 🔴 LIVE STREAM - GTD 100 ENTRIES",
-    "CenterP MORNING DEEPSTACK - GTD 100 Entries",
-    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 𝐒𝐂𝐀𝐑𝐋𝐄𝐓 𝐒𝐍𝐀𝐊𝐄 -  GTD 4 tickets"
-   ]
-  },
-  "royal": {
-   "found": 970,
+   "found": 0,
    "matched": 0,
    "unmatched": []
+  },
+  "royal": {
+   "found": 986,
+   "matched": 0,
+   "unmatched": [
+    "SATELLITE FOR TUESDAY KNIGHT",
+    "R - HAPPY MORNING",
+    "R - TUESDAY KNIGHT",
+    "R - SPEED I (25% ITM)",
+    "R - SPEED II (25% ITM)",
+    "SATELLITE CREDIT 2M5",
+    "R - SPEED III (25% ITM)",
+    "R - DEEPSTACK TURBO",
+    "R - MINI DEEPSTACK (25% ITM)",
+    "R - RELAX 25% ITM"
+   ]
   },
   "gl": {
    "found": 0,
