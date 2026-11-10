@@ -1,12 +1,13 @@
 {
- "updatedAt": 1794306811263,
+ "updatedAt": 1794334448906,
  "days": [
-  "11-10"
+  "11-10",
+  "11-11"
  ],
  "entries": {},
  "log": {
   "arena": {
-   "found": 18,
+   "found": 20,
    "matched": 0,
    "unmatched": [
     "ARENA NIGHT (15% ITM)",
@@ -14,36 +15,29 @@
     "THE GLADIATOR DASH (15%ITM)",
     "SATELLITE FOR THE GLADIATOR DASH 1IN6",
     "COLOSSEUM ARENA EXPRESS",
-    "[MAIN] MARS BATTLEGROUND"
+    "[MAIN] MERCURY SPEED WAY",
+    "SATELLITE FOR MERCURY SPEEDWAY - 1IN6"
    ]
   },
   "center": {
-   "found": 14,
+   "found": 0,
    "matched": 0,
-   "unmatched": [
-    "CenterP Fast & Furious - GTD 100 Entries",
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets",
-    "𝐂𝐄𝐍𝐓𝐄𝐑-𝐏 𝐌𝐀𝐈𝐍 𝐄𝐕𝐄𝐍𝐓 𝟔.𝟔 🔴 LIVE STREAM - GTD 80 Entries",
-    "𝐂𝐄𝐍𝐓𝐄𝐑-𝐏 𝐎𝐑𝐀𝐍𝐆𝐄 𝐎𝐊𝐀𝐏𝐈 - GTD 100 Entries",
-    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 𝐌𝐀𝐈𝐍 𝐄𝐕𝐄𝐍𝐓 𝟔.𝟔 -  GTD 4 tickets"
-   ]
+   "unmatched": []
   },
   "royal": {
-   "found": 958,
+   "found": 966,
    "matched": 0,
    "unmatched": [
-    "SATELLITE FOR TUESDAY KNIGHT",
     "R - HAPPY MORNING",
-    "R - TUESDAY KNIGHT",
-    "Super Tiger Tour RPT HRL Series GTD 200M",
     "R - SPEED I (25% ITM)",
+    "Super Tiger Tour RPT HRL Series GTD 200M",
     "R - SPEED II (25% ITM)",
-    "SATELLITE CREDIT 2M5",
     "R - SPEED III (25% ITM)",
     "R - DEEPSTACK TURBO",
-    "R - MINI DEEPSTACK (25% ITM)"
+    "R - MINI DEEPSTACK (25% ITM)",
+    "R - RELAX 25% ITM",
+    "R - HAPPY NIGHT (25% ITM)",
+    "SATELLITE FOR WEDNESDAY CASTLE"
    ]
   },
   "gl": {
