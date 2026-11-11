@@ -1,43 +1,71 @@
 {
- "updatedAt": 1794334448906,
+ "updatedAt": 1794390990940,
  "days": [
-  "11-10",
   "11-11"
  ],
- "entries": {},
+ "entries": {
+  "arena-11-11-2000-arena-night-15-itm": {
+   "n": 0,
+   "at": 1794390990940
+  },
+  "arena-11-11-1800-hyper-clash": {
+   "n": 0,
+   "at": 1794390990940
+  },
+  "arena-11-11-1700-the-gladiator-dash-15-itm": {
+   "n": 3,
+   "at": 1794390990940
+  },
+  "arena-11-11-1530-satellite-for-the-gladiator-dash-1in6": {
+   "n": 28,
+   "at": 1794390990940
+  },
+  "arena-11-11-1400-colosseum-arena-express": {
+   "n": 69,
+   "at": 1794390990940
+  },
+  "arena-11-11-1000-main-mercury-speed-way": {
+   "n": 95,
+   "at": 1794390990940
+  },
+  "arena-11-11-0930-satellite-for-mercury-speedway-1in6": {
+   "n": 31,
+   "at": 1794390990940
+  }
+ },
  "log": {
   "arena": {
    "found": 20,
-   "matched": 0,
-   "unmatched": [
-    "ARENA NIGHT (15% ITM)",
-    "HYPER CLASH",
-    "THE GLADIATOR DASH (15%ITM)",
-    "SATELLITE FOR THE GLADIATOR DASH 1IN6",
-    "COLOSSEUM ARENA EXPRESS",
-    "[MAIN] MERCURY SPEED WAY",
-    "SATELLITE FOR MERCURY SPEEDWAY - 1IN6"
-   ]
-  },
-  "center": {
-   "found": 0,
-   "matched": 0,
+   "matched": 7,
    "unmatched": []
   },
-  "royal": {
-   "found": 966,
+  "center": {
+   "found": 14,
    "matched": 0,
    "unmatched": [
-    "R - HAPPY MORNING",
-    "R - SPEED I (25% ITM)",
+    "CenterP Fast & Furious - GTD 100 Entries",
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HIGH ROLLER -  GTD 4 tickets",
+    "CENTER - P YELLOW YETI LIVE STREAM - GTD 100 ENTRIES",
+    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 YELLOW YETI -  GTD 4 tickets",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
+   ]
+  },
+  "royal": {
+   "found": 958,
+   "matched": 0,
+   "unmatched": [
     "Super Tiger Tour RPT HRL Series GTD 200M",
+    "SATELLITE FOR WEDNESDAY CASTLE",
+    "R - HAPPY MORNING",
+    "R - WEDNESDAY CASTLE (Live)",
+    "R - SPEED I (25% ITM)",
     "R - SPEED II (25% ITM)",
+    "SATELLITE CREDIT 2M5",
     "R - SPEED III (25% ITM)",
     "R - DEEPSTACK TURBO",
-    "R - MINI DEEPSTACK (25% ITM)",
-    "R - RELAX 25% ITM",
-    "R - HAPPY NIGHT (25% ITM)",
-    "SATELLITE FOR WEDNESDAY CASTLE"
+    "R - MINI DEEPSTACK (25% ITM)"
    ]
   },
   "gl": {
@@ -51,6 +79,11 @@
    "unmatched": []
   },
   "vpl": {
+   "found": 0,
+   "matched": 0,
+   "unmatched": []
+  },
+  "gp": {
    "found": 0,
    "matched": 0,
    "unmatched": []
