@@ -1,7 +1,8 @@
 {
- "updatedAt": 1794390990940,
+ "updatedAt": 1794418430257,
  "days": [
-  "11-11"
+  "11-11",
+  "11-12"
  ],
  "entries": {
   "arena-11-11-2000-arena-night-15-itm": {
@@ -35,37 +36,36 @@
  },
  "log": {
   "arena": {
-   "found": 20,
-   "matched": 7,
-   "unmatched": []
-  },
-  "center": {
-   "found": 14,
+   "found": 18,
    "matched": 0,
    "unmatched": [
-    "CenterP Fast & Furious - GTD 100 Entries",
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HIGH ROLLER -  GTD 4 tickets",
-    "CENTER - P YELLOW YETI LIVE STREAM - GTD 100 ENTRIES",
-    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 YELLOW YETI -  GTD 4 tickets",
-    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
+    "ARENA NIGHT (15% ITM)",
+    "HYPER CLASH",
+    "THE GLADIATOR DASH (15%ITM)",
+    "SATELLITE FOR THE GLADIATOR DASH 1IN6",
+    "COLOSSEUM ARENA EXPRESS",
+    "[MAIN] JUPITER THUNDER"
    ]
   },
+  "center": {
+   "found": 0,
+   "matched": 0,
+   "unmatched": []
+  },
   "royal": {
-   "found": 958,
+   "found": 965,
    "matched": 0,
    "unmatched": [
     "Super Tiger Tour RPT HRL Series GTD 200M",
-    "SATELLITE FOR WEDNESDAY CASTLE",
-    "R - HAPPY MORNING",
-    "R - WEDNESDAY CASTLE (Live)",
     "R - SPEED I (25% ITM)",
     "R - SPEED II (25% ITM)",
-    "SATELLITE CREDIT 2M5",
     "R - SPEED III (25% ITM)",
     "R - DEEPSTACK TURBO",
-    "R - MINI DEEPSTACK (25% ITM)"
+    "R - MINI DEEPSTACK (25% ITM)",
+    "R - RELAX 25% ITM",
+    "R - HAPPY NIGHT (25% ITM)",
+    "SATELLITE FOR BILLIONAIRE MAKER",
+    "R - THURSDAY DUKE"
    ]
   },
   "gl": {
