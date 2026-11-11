@@ -1,6 +1,6 @@
 # Lịch Poker Hà Nội
 
-Trang gộp lịch giải của 6 CLB poker Hà Nội, có cảnh báo Overlay. Số entry được tự cập nhật 15 phút/lần từ 10:00 đến 00:45 bằng GitHub Actions, không tốn credit Claude.
+Trang gộp lịch giải của 7 CLB poker Hà Nội, có cảnh báo Overlay. Số entry được tự cập nhật 15 phút/lần từ 10:00 đến 00:45 bằng GitHub Actions, không tốn credit Claude.
 
 ## Các file
 
@@ -43,6 +43,7 @@ Sau đó mở trang qua một server tĩnh, ví dụ `npx serve .`. Mở file tr
 | Royal | Thẻ LIVE NOW trên trang chủ | Khi giải đang chạy |
 | Grand Loyal | Trang `/tracker` | Khi giải đang chạy (chưa kiểm được định dạng lúc có giải chạy) |
 | Quads, VPL | Không thấy công khai | Không có |
+| Grand Poker | Trang chủ (file `registration.json`) | Chưa kiểm được: web chưa đăng giải nào |
 
 Nếu log báo `unmatched` cho một CLB, nghĩa là tên giải trên web khác tên trong `schedule.js`. Sửa tên trong `schedule.js` cho khớp.
 

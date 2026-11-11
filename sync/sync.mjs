@@ -20,6 +20,7 @@ const SITES = [
   { club: "gl",     url: "https://grandloyal.vn/tracker" },
   { club: "quads",  url: "https://quadspoker.vn/" },
   { club: "vpl",    url: "https://vietnampokerleague.com/" },
+  { club: "gp",     url: "https://grandpokerhanoi.com/" },
 ];
 const KEEP_DAYS = 2;
 

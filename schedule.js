@@ -2,12 +2,13 @@
 // Sửa lịch tuần mới ở đây: mỗi dòng RAW là một giải.
 (function (g) {
 const CLUBS = {
-  vpl:   {name:"VPL · HSOP", full:"Vietnam Poker League", addr:"Grand Plaza Hotel, Hà Nội", url:"https://vietnampokerleague.com/", color:"#b8892e"},
-  center:{name:"Center Poker", full:"Center Poker Club", addr:"Hà Nội", url:"https://centerpoker.vn/", color:"#7b4fd6"},
-  royal: {name:"Royal Poker", full:"Royal Poker Tour", addr:"Hà Nội", url:"https://royal-poker.com/en", color:"#c2386a"},
-  quads: {name:"Quads", full:"Quads Poker Club", addr:"Hà Nội", url:"https://quadspoker.vn/", color:"#0e8f84"},
-  gl:    {name:"Grand Loyal", full:"Grand Loyal Poker", addr:"Tầng 2, 146 Giảng Võ, Ba Đình · 0869 583 586", url:"https://grandloyal.vn/", color:"#2f6fd0"},
-  arena: {name:"Arena", full:"Arena Poker Club", addr:"Tầng 3 CTM Complex, 139 Cầu Giấy · 079 768 6626", url:"https://arenapoker.vn/", color:"#4e8a1c"},
+  vpl:   {short:"VPL", name:"VPL · HSOP", full:"Vietnam Poker League", addr:"Grand Plaza Hotel, Hà Nội", url:"https://vietnampokerleague.com/", color:"#b8892e"},
+  center:{short:"CP", name:"Center Poker", full:"Center Poker Club", addr:"Hà Nội", url:"https://centerpoker.vn/", color:"#7b4fd6"},
+  royal: {short:"RP", name:"Royal Poker", full:"Royal Poker Tour", addr:"Hà Nội", url:"https://royal-poker.com/en", color:"#c2386a"},
+  quads: {short:"QD", name:"Quads", full:"Quads Poker Club", addr:"Hà Nội", url:"https://quadspoker.vn/", color:"#0e8f84"},
+  gl:    {short:"GL", name:"Grand Loyal", full:"Grand Loyal Poker", addr:"Tầng 2, 146 Giảng Võ, Ba Đình · 0869 583 586", url:"https://grandloyal.vn/", color:"#2f6fd0"},
+  arena: {short:"AR", name:"Arena", full:"Arena Poker Club", addr:"Tầng 3 CTM Complex, 139 Cầu Giấy · 079 768 6626", url:"https://arenapoker.vn/", color:"#4e8a1c"},
+  gp:    {short:"GP", name:"Grand Poker", full:"Grand Poker Hà Nội", addr:"Tầng 1 Grand Plaza, 117 Trần Duy Hưng, Cầu Giấy", url:"https://grandpokerhanoi.com/", color:"#b5531b"},
 };
 
 // [ngày MM-DD, giờ bắt đầu, tên, buy-in (nghìn đ), GTD (nghìn đ | "N vé" | null), giờ đóng reg | null, số entry GTD CLB công bố]
@@ -100,6 +101,7 @@ const RAW = {
     ["11-15","17:30","New Superstack (25% ITM)",1320,45000,"21:06"],
     ["11-15","20:30","Mini Deepstack (25% ITM)",1180,12500,"22:20"],
   ],
+  gp:[],
   arena:[
     ["11-11","09:30","Satellite for Mercury Speedway - 1in6",244,"5 vé",null],
     ["11-11","10:00","[MAIN] Mercury Speed Way",1220,100000,null,100],
