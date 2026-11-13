@@ -1,7 +1,8 @@
 {
- "updatedAt": 1794564745373,
+ "updatedAt": 1794591729757,
  "days": [
-  "11-13"
+  "11-13",
+  "11-14"
  ],
  "entries": {
   "arena-11-13-1530-satellite-for-the-gladiator-dash-1in6": {
@@ -39,37 +40,48 @@
   "center-11-13-1030-centerp-morning-deepstack": {
    "n": 115,
    "at": 1794564745373
+  },
+  "arena-11-14-1530-satellite-for-the-gladiator-dash-1in6": {
+   "n": 0,
+   "at": 1794591729757
   }
  },
  "log": {
   "arena": {
-   "found": 18,
-   "matched": 6,
-   "unmatched": []
+   "found": 20,
+   "matched": 1,
+   "unmatched": [
+    "ARENA NIGHT (15% ITM)",
+    "HYPER CLASH",
+    "THE GLADIATOR DASH (15%ITM)",
+    "COLOSSEUM ARENA EXPRESS",
+    "[MAIN] SATURN CHRONICLES",
+    "IMPERIAL SECRETS"
+   ]
   },
   "center": {
-   "found": 12,
-   "matched": 3,
+   "found": 6,
+   "matched": 0,
    "unmatched": [
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets"
+    "CenterP MAIN EVENT 4.5 - GTD 80 Entries",
+    "CenterP NAVI NIGHTHAWK - GTD 100 Entries",
+    "CenterP Satellite For MAIN EVENT 4.5 -  GTD 4 tickets"
    ]
   },
   "royal": {
-   "found": 972,
+   "found": 975,
    "matched": 0,
    "unmatched": [
-    "SATELLITE FOR FRIDAY VISCOUNT",
     "R - HAPPY MORNING",
-    "R - FRIDAY VISCOUNT (LIVE)",
     "R - SPEED I (25% ITM)",
     "R - SPEED II (25% ITM)",
-    "SATELLITE CREDIT 2M5",
     "R - SPEED III (25% ITM)",
     "R - DEEPSTACK TURBO",
     "R - MINI DEEPSTACK (25% ITM)",
-    "R - RELAX 25% ITM"
+    "R - RELAX 25% ITM",
+    "R - HAPPY NIGHT (25% ITM)",
+    "SATELLITE SPECIAL TOURNAMENT",
+    "R - SPECIAL TOURNAMENT"
    ]
   },
   "gl": {
