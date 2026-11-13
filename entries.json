@@ -1,7 +1,6 @@
 {
- "updatedAt": 1794591729757,
+ "updatedAt": 1794610370639,
  "days": [
-  "11-13",
   "11-14"
  ],
  "entries": {
@@ -43,7 +42,7 @@
   },
   "arena-11-14-1530-satellite-for-the-gladiator-dash-1in6": {
    "n": 0,
-   "at": 1794591729757
+   "at": 1794610370639
   }
  },
  "log": {
@@ -72,16 +71,16 @@
    "found": 975,
    "matched": 0,
    "unmatched": [
-    "R - HAPPY MORNING",
-    "R - SPEED I (25% ITM)",
-    "R - SPEED II (25% ITM)",
-    "R - SPEED III (25% ITM)",
-    "R - DEEPSTACK TURBO",
+    "SATELLITE SPECIAL TOURNAMENT",
+    "R - SPECIAL TOURNAMENT",
     "R - MINI DEEPSTACK (25% ITM)",
+    "R - MINI HIGH ROLLER",
     "R - RELAX 25% ITM",
     "R - HAPPY NIGHT (25% ITM)",
-    "SATELLITE SPECIAL TOURNAMENT",
-    "R - SPECIAL TOURNAMENT"
+    "#15 ROYAL RELAX 25% ITM - GTD 10 ENTRIES",
+    "#14 DOUBLE STACK - 25% ITM",
+    "ROYAL RELAX II 25% ITM - GTD 12M",
+    "#12 SUPER HIGH ROLLER - GTD 2 BILLION"
    ]
   },
   "gl": {
