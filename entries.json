@@ -1,78 +1,75 @@
 {
- "updatedAt": 1794508105187,
+ "updatedAt": 1794564745373,
  "days": [
-  "11-12",
   "11-13"
  ],
  "entries": {
-  "arena-11-11-2000-arena-night-15-itm": {
-   "n": 0,
-   "at": 1794390990940
-  },
-  "arena-11-11-1800-hyper-clash": {
-   "n": 0,
-   "at": 1794390990940
-  },
-  "arena-11-11-1700-the-gladiator-dash-15-itm": {
-   "n": 3,
-   "at": 1794390990940
-  },
-  "arena-11-11-1530-satellite-for-the-gladiator-dash-1in6": {
-   "n": 28,
-   "at": 1794390990940
-  },
-  "arena-11-11-1400-colosseum-arena-express": {
-   "n": 69,
-   "at": 1794390990940
-  },
-  "arena-11-11-1000-main-mercury-speed-way": {
-   "n": 95,
-   "at": 1794390990940
-  },
-  "arena-11-11-0930-satellite-for-mercury-speedway-1in6": {
-   "n": 31,
-   "at": 1794390990940
-  },
   "arena-11-13-1530-satellite-for-the-gladiator-dash-1in6": {
+   "n": 31,
+   "at": 1794564745373
+  },
+  "arena-11-13-2000-arena-night-15-itm": {
    "n": 0,
-   "at": 1794508105187
+   "at": 1794564745373
+  },
+  "arena-11-13-1800-hyper-clash": {
+   "n": 0,
+   "at": 1794564745373
+  },
+  "arena-11-13-1700-the-gladiator-dash-15-itm": {
+   "n": 7,
+   "at": 1794564745373
+  },
+  "arena-11-13-1400-colosseum-arena-express": {
+   "n": 107,
+   "at": 1794564745373
+  },
+  "arena-11-13-1000-main-venus-showdown": {
+   "n": 111,
+   "at": 1794564745373
+  },
+  "center-11-13-1100-center-p-blue-badger": {
+   "n": 126,
+   "at": 1794564745373
+  },
+  "center-11-13-1030-satellite-for-blue-badger": {
+   "n": 47,
+   "at": 1794564745373
+  },
+  "center-11-13-1030-centerp-morning-deepstack": {
+   "n": 115,
+   "at": 1794564745373
   }
  },
  "log": {
   "arena": {
    "found": 18,
-   "matched": 1,
-   "unmatched": [
-    "ARENA NIGHT (15% ITM)",
-    "HYPER CLASH",
-    "THE GLADIATOR DASH (15%ITM)",
-    "COLOSSEUM ARENA EXPRESS",
-    "[MAIN] VENUS SHOWDOWN"
-   ]
+   "matched": 6,
+   "unmatched": []
   },
   "center": {
-   "found": 6,
-   "matched": 0,
+   "found": 12,
+   "matched": 3,
    "unmatched": [
-    "𝗖𝗘𝗡𝗧𝗘𝗥-𝗣 𝗕𝗟𝗨𝗘 𝗕𝗔𝗗𝗚𝗘𝗥 - GTD 100 ENTRIES ( LIVE STREAM )",
-    "CenterP MORNING DEEPSTACK - GTD 100 Entries",
-    "𝗦𝗔𝗧𝗘𝗟𝗟𝗜𝗧𝗘 𝗙𝗢𝗥 𝗕𝗟𝗨𝗘 𝗕𝗔𝗗𝗚𝗘𝗥 -  GTD 4 tickets"
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets"
    ]
   },
   "royal": {
    "found": 972,
    "matched": 0,
    "unmatched": [
+    "SATELLITE FOR FRIDAY VISCOUNT",
+    "R - HAPPY MORNING",
+    "R - FRIDAY VISCOUNT (LIVE)",
     "R - SPEED I (25% ITM)",
     "R - SPEED II (25% ITM)",
+    "SATELLITE CREDIT 2M5",
     "R - SPEED III (25% ITM)",
     "R - DEEPSTACK TURBO",
     "R - MINI DEEPSTACK (25% ITM)",
-    "R - RELAX 25% ITM",
-    "R - HAPPY NIGHT (25% ITM)",
-    "SATELLITE FOR FRIDAY VISCOUNT",
-    "R - HAPPY MORNING",
-    "R - FRIDAY VISCOUNT (LIVE)"
+    "R - RELAX 25% ITM"
    ]
   },
   "gl": {
