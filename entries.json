@@ -1,5 +1,5 @@
 {
- "updatedAt": 1794610370639,
+ "updatedAt": 1794648895004,
  "days": [
   "11-14"
  ],
@@ -41,8 +41,8 @@
    "at": 1794564745373
   },
   "arena-11-14-1530-satellite-for-the-gladiator-dash-1in6": {
-   "n": 0,
-   "at": 1794610370639
+   "n": 36,
+   "at": 1794648895004
   }
  },
  "log": {
@@ -59,12 +59,15 @@
    ]
   },
   "center": {
-   "found": 6,
+   "found": 12,
    "matched": 0,
    "unmatched": [
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets",
     "CenterP MAIN EVENT 4.5 - GTD 80 Entries",
-    "CenterP NAVI NIGHTHAWK - GTD 100 Entries",
-    "CenterP Satellite For MAIN EVENT 4.5 -  GTD 4 tickets"
+    "CenterP Satellite For MAIN EVENT 4.5 -  GTD 4 tickets",
+    "CenterP NAVI NIGHTHAWK - GTD 100 Entries"
    ]
   },
   "royal": {
