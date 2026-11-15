@@ -1,45 +1,10 @@
 {
- "updatedAt": 1794736918314,
+ "updatedAt": 1794762140001,
  "days": [
-  "11-15"
+  "11-15",
+  "11-16"
  ],
  "entries": {
-  "arena-11-13-1530-satellite-for-the-gladiator-dash-1in6": {
-   "n": 31,
-   "at": 1794564745373
-  },
-  "arena-11-13-2000-arena-night-15-itm": {
-   "n": 0,
-   "at": 1794564745373
-  },
-  "arena-11-13-1800-hyper-clash": {
-   "n": 0,
-   "at": 1794564745373
-  },
-  "arena-11-13-1700-the-gladiator-dash-15-itm": {
-   "n": 7,
-   "at": 1794564745373
-  },
-  "arena-11-13-1400-colosseum-arena-express": {
-   "n": 107,
-   "at": 1794564745373
-  },
-  "arena-11-13-1000-main-venus-showdown": {
-   "n": 111,
-   "at": 1794564745373
-  },
-  "center-11-13-1100-center-p-blue-badger": {
-   "n": 126,
-   "at": 1794564745373
-  },
-  "center-11-13-1030-satellite-for-blue-badger": {
-   "n": 47,
-   "at": 1794564745373
-  },
-  "center-11-13-1030-centerp-morning-deepstack": {
-   "n": 115,
-   "at": 1794564745373
-  },
   "arena-11-14-1530-satellite-for-the-gladiator-dash-1in6": {
    "n": 50,
    "at": 1794672343970
@@ -52,42 +17,34 @@
  "log": {
   "arena": {
    "found": 18,
-   "matched": 1,
+   "matched": 0,
    "unmatched": [
     "ARENA NIGHT (15% ITM)",
     "HYPER CLASH",
     "THE GLADIATOR DASH (15%ITM)",
+    "SATELLITE FOR THE GLADIATOR DASH 1IN6",
     "COLOSSEUM ARENA EXPRESS",
-    "[MAIN] SOLINVICTUS"
+    "[MAIN] LUNA CLASH"
    ]
   },
   "center": {
-   "found": 14,
+   "found": 0,
    "matched": 0,
-   "unmatched": [
-    "CenterP Fast & Furious - GTD 100 Entries",
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HR -  GTD 4 tickets",
-    "𝐂𝐄𝐍𝐓𝐄𝐑 - 𝐏 𝐕𝐈𝐎𝐋𝐄𝐓 𝐕𝐈𝐏𝐄𝐑 - GTD 100 ENTRIES ( LIVE STREAM )",
-    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 𝐕𝐈𝐎𝐋𝐄𝐓 𝐕𝐈𝐏𝐄𝐑 -  GTD 4 tickets",
-    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
-   ]
+   "unmatched": []
   },
   "royal": {
-   "found": 981,
+   "found": 969,
    "matched": 0,
    "unmatched": [
-    "SATELLITE FOR SUNDAY MARQUESS",
-    "R - HAPPY MORNING",
-    "R - SUNDAY MARQUESS",
-    "R - SPECIAL TOURNAMENT FINAL DAY",
-    "R - SPEED I (25% ITM)",
-    "R - SPEED II (25% ITM)",
-    "SATELLITE CREDIT 2M5",
-    "R - SPEED III (25% ITM)",
-    "R - DEEPSTACK TURBO",
-    "R - MINI DEEPSTACK (25% ITM)"
+    "#18 ROYAL RELAX 25% ITM - GTD 15M",
+    "ROYAL RELAX II (25% ITM) - GTD 12M",
+    "S5 SATELLITE FOR MINI MAIN (10 IN 1) - GTD 3 TICKET",
+    "#19 BILLIONAIRE MAKER - (8-MAX)",
+    "#20 ROYAL MINI DEEPSTACK (25% ITM) - GTD 100M",
+    "#22 ROYAL RELAX (25% ITM) - GTD 15M",
+    "#11 MINI MAIN - FINALDAY",
+    "SATELLITE FOR MAIN EVENT (10 IN 1) - GTD 2 TICKETS",
+    "#25 MINI DEEPSTACK 25% ITM - GTD 100M"
    ]
   },
   "gl": {
