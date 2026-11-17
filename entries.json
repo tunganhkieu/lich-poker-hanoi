@@ -1,14 +1,9 @@
 {
- "updatedAt": 1794861331830,
+ "updatedAt": 1794914208583,
  "days": [
   "11-17"
  ],
- "entries": {
-  "arena-11-15-1530-satellite-for-the-gladiator-dash-1in6": {
-   "n": 49,
-   "at": 1794736918314
-  }
- },
+ "entries": {},
  "log": {
   "arena": {
    "found": 18,
@@ -19,16 +14,24 @@
     "THE GLADIATOR DASH (15%ITM)",
     "SATELLITE FOR THE GLADIATOR DASH 1IN6",
     "COLOSSEUM ARENA EXPRESS",
-    "[MAIN] MARS BATTLEFROUND"
+    "[MAIN] MARS BATTLEGROUND"
    ]
   },
   "center": {
-   "found": 0,
+   "found": 14,
    "matched": 0,
-   "unmatched": []
+   "unmatched": [
+    "CenterP Fast & Furious - GTD 100 Entries",
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets",
+    "CenterP SUPER BOOSTED D1 (PLAY TO1A.M) - GTD 2B",
+    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 SUPER BOOSTED -  GTD 4 tickets",
+    "CenterP ORANGE OKAPI  - GTD 100 Entries"
+   ]
   },
   "royal": {
-   "found": 969,
+   "found": 980,
    "matched": 0,
    "unmatched": [
     "#27 ROYAL RELAX 25% ITM - GTD 15M",
