@@ -1,35 +1,30 @@
 {
- "updatedAt": 1794998983527,
+ "updatedAt": 1795029399707,
  "days": [
-  "11-18"
+  "11-18",
+  "11-19"
  ],
  "entries": {},
  "log": {
   "arena": {
-   "found": 20,
+   "found": 18,
    "matched": 0,
    "unmatched": [
     "ARENA NIGHT (15% ITM)",
     "HYPER CLASH",
-    "THE GLADIATOR DASH (15%ITM)",
-    "SATELLITE FOR THE GLADIATOR DASH 1IN6",
+    "ARENA OF GLORY MULTIDAY - DAY 1B",
     "COLOSSEUM ARENA EXPRESS",
-    "[MAIN] MERCURY SPEED WAY",
-    "SATELLITE FOR MECURY SPEEDWAY 1IN6"
+    "ARENA OF GLORY MULTIDAY - DAY 1A",
+    "SATELLITE FOR ARENA OF GLORY MULTIDAY 1IN6"
    ]
   },
   "center": {
-   "found": 16,
+   "found": 6,
    "matched": 0,
    "unmatched": [
-    "CenterP Fast & Furious - GTD 100 Entries",
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets",
-    "CenterP SUPER BOOSTED D1 (PLAY TO1A.M) - GTD 2B",
-    "CTP YELLOW YETI - GTD 100 ENTRIES",
-    "CenterP Satellite For YELLOW YETI -  GTD 4 tickets",
-    "CTP MORNING DEEPSTACK - GTD 100 ENTRIES"
+    "CENTER - P GREEN GECKO - 100E LIVE STREAM",
+    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 GREEN GECKO -  GTD 4 tickets",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
    ]
   },
   "royal": {
@@ -42,7 +37,10 @@
     "#29 DOUBLE STACK (25% ITM)",
     "SATELLITE FOR MAIN EVENT (10 in 1) - GTD 2 TICKETS",
     "#31 BILLIONAIRE MAKER (8-MAX)",
-    "#32 ROYAL MINI DEEPSTACK (25%ITM) - GTD 100M"
+    "#32 ROYAL MINI DEEPSTACK (25%ITM) - GTD 100M",
+    "#33 DOUBLE STACK (25% ITM)",
+    "#34 ROYAL RELAX (25% ITM) - GTD 15M",
+    "ROYAL RELAX II (25% ITM) - GTD 12M"
    ]
   },
   "gl": {
