@@ -1,7 +1,8 @@
 {
- "updatedAt": 1795085434908,
+ "updatedAt": 1795115596369,
  "days": [
-  "11-19"
+  "11-19",
+  "11-20"
  ],
  "entries": {},
  "log": {
@@ -11,24 +12,16 @@
    "unmatched": [
     "ARENA NIGHT (15% ITM)",
     "HYPER CLASH",
-    "ARENA OF GLORY MULTIDAY - DAY 1B",
+    "ARENA OF GLORY MULTIDAY - DAY 1D",
     "COLOSSEUM ARENA EXPRESS",
-    "ARENA OF GLORY MULTIDAY - DAY 1A",
+    "ARENA OF GLORY MULTIDAY - DAY 1C",
     "SATELLITE FOR ARENA OF GLORY MULTIDAY 1IN6"
    ]
   },
   "center": {
-   "found": 14,
+   "found": 0,
    "matched": 0,
-   "unmatched": [
-    "CenterP Fast & Furious - GTD 100 Entries",
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HR -  GTD 4 tickets",
-    "CENTER - P GREEN GECKO - 100E LIVE STREAM",
-    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 GREEN GECKO -  GTD 4 tickets",
-    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
-   ]
+   "unmatched": []
   },
   "royal": {
    "found": 980,
@@ -40,7 +33,10 @@
     "MAIN EVENT (8-MAX) - FINAL DAY",
     "SATELLITE FOR BILLIONAIRE MAKER (10 in 1) - GTD 3 TICKETS",
     "#37 ROYAL MINI DEEPSTACK (25% ITM) - GTD 100M",
-    "#35 BILLIONAIRE MAKER (8-MAX) - GTD 700M"
+    "#35 BILLIONAIRE MAKER (8-MAX) - GTD 700M",
+    "#39 ROYAL RELAX 25% ITM - GTD 15M",
+    "ROYAL RELAX II 25% ITM - GTD 12M",
+    "#36 MEGA STACK HIGH ROLLER (8-MAX) - GTD 2 BILLION"
    ]
   },
   "gl": {
