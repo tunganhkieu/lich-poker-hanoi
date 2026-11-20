@@ -1,34 +1,29 @@
 {
- "updatedAt": 1795171168026,
+ "updatedAt": 1795200530919,
  "days": [
-  "11-20"
+  "11-20",
+  "11-21"
  ],
  "entries": {},
  "log": {
   "arena": {
-   "found": 18,
+   "found": 15,
    "matched": 0,
    "unmatched": [
     "ARENA NIGHT (15% ITM)",
     "HYPER CLASH",
-    "ARENA OF GLORY MULTIDAY - DAY 1D",
-    "COLOSSEUM ARENA EXPRESS",
-    "ARENA OF GLORY MULTIDAY - DAY 1C",
+    "ARENA OF GLORY MULTIDAY - DAY 1F",
+    "ARENA OF GLORY MULTIDAY - DAY 1E",
     "SATELLITE FOR ARENA OF GLORY MULTIDAY 1IN6"
    ]
   },
   "center": {
-   "found": 16,
+   "found": 6,
    "matched": 0,
    "unmatched": [
-    "CenterP Evening DeepStack Turbo - GTD 10 Entries",
-    "CenterP Fast & Furious - GTD 100 Entries",
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HIGHROLLER -  GTD 4 tickets",
-    "CTP BLUE BADGER- GTD 100 ENTRIES",
-    "CenterP Satellite For BLUE BADGER -  GTD 4 tickets",
-    "MORNING DEEPSTACK- GTD 100 ENTRIES"
+    "Center-P Navi Nighthawk - GTD 100 ENTRIES - LIVE TREAM",
+    "Satellite for Navi Nighthawk -  GTD 4 tickets",
+    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
    ]
   },
   "royal": {
@@ -38,7 +33,10 @@
     "#39 ROYAL RELAX 25% ITM - GTD 15M",
     "ROYAL RELAX II 25% ITM - GTD 12M",
     "#36 MEGA STACK HIGH ROLLER (8-MAX) - GTD 2 BILLION",
-    "#40 RPT SINGLE DAY THANK YOU! - GTD 2.5B"
+    "#40 RPT SINGLE DAY THANK YOU! - GTD 2.5B",
+    "#42 MINI DEEPSTACK 25% ITM - GTD 100M",
+    "#44 ROYAL RELAX 25% ITM - GTD 15M",
+    "#41 HIGH ROLLER LAST CHANCE (8-MAX) - GTD 600M"
    ]
   },
   "gl": {
