@@ -1,7 +1,6 @@
 {
- "updatedAt": 1795200530919,
+ "updatedAt": 1795256542843,
  "days": [
-  "11-20",
   "11-21"
  ],
  "entries": {},
@@ -18,9 +17,14 @@
    ]
   },
   "center": {
-   "found": 6,
+   "found": 16,
    "matched": 0,
    "unmatched": [
+    "CenterP Evening DeepStack Turbo - GTD 10 Entries",
+    "CenterP Fast & Furious - GTD 100 Entries",
+    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
+    "CenterP Daily - GTD 100 Entries",
+    "CenterP Satellite For MINI HR -  GTD 4 tickets",
     "Center-P Navi Nighthawk - GTD 100 ENTRIES - LIVE TREAM",
     "Satellite for Navi Nighthawk -  GTD 4 tickets",
     "CenterP MORNING DEEPSTACK - GTD 100 Entries"
@@ -30,12 +34,9 @@
    "found": 980,
    "matched": 0,
    "unmatched": [
-    "#39 ROYAL RELAX 25% ITM - GTD 15M",
-    "ROYAL RELAX II 25% ITM - GTD 12M",
-    "#36 MEGA STACK HIGH ROLLER (8-MAX) - GTD 2 BILLION",
-    "#40 RPT SINGLE DAY THANK YOU! - GTD 2.5B",
     "#42 MINI DEEPSTACK 25% ITM - GTD 100M",
     "#44 ROYAL RELAX 25% ITM - GTD 15M",
+    "ROYAL RELAX II 25% ITM - GTD 12M",
     "#41 HIGH ROLLER LAST CHANCE (8-MAX) - GTD 600M"
    ]
   },
