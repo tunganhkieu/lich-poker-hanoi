@@ -1,7 +1,6 @@
 {
- "updatedAt": 1795282835971,
+ "updatedAt": 1795299728828,
  "days": [
-  "11-21",
   "11-22"
  ],
  "entries": {},
@@ -31,12 +30,7 @@
   "royal": {
    "found": 980,
    "matched": 0,
-   "unmatched": [
-    "#42 MINI DEEPSTACK 25% ITM - GTD 100M",
-    "#44 ROYAL RELAX 25% ITM - GTD 15M",
-    "ROYAL RELAX II 25% ITM - GTD 12M",
-    "#41 HIGH ROLLER LAST CHANCE (8-MAX) - GTD 600M"
-   ]
+   "unmatched": []
   },
   "gl": {
    "found": 0,
