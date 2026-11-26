@@ -1,7 +1,7 @@
 {
- "updatedAt": 1795693062259,
+ "updatedAt": 1795725112913,
  "days": [
-  "11-26"
+  "11-27"
  ],
  "entries": {},
  "log": {
@@ -14,29 +14,18 @@
     "THE GLADIATOR DASH (15%ITM)",
     "SATELLITE FOR THE GLADIATOR DASH 1IN6",
     "COLOSSEUM ARENA EXPRESS",
-    "[MAIN] JUPITER THUNDER"
+    "[MAIN] VENUS SHOWDOWN"
    ]
   },
   "center": {
-   "found": 14,
+   "found": 0,
    "matched": 0,
-   "unmatched": [
-    "CenterP Fast & Furious - GTD 100 Entries",
-    "CPM MINI HIGHROLLER - GTD 30 ENTRIES",
-    "CenterP Daily - GTD 100 Entries",
-    "CenterP Satellite For MINI HR -  GTD 4 tickets",
-    "CENTER - P GREEN GECKO LIVESTREAM - 100 ENTRIES",
-    "𝐒𝐀𝐓𝐄𝐋𝐋𝐈𝐓𝐄 𝐅𝐎𝐑 GREEN GECKO -  GTD 4 tickets",
-    "CenterP MORNING DEEPSTACK - GTD 100 Entries"
-   ]
+   "unmatched": []
   },
   "royal": {
-   "found": 958,
+   "found": 956,
    "matched": 0,
-   "unmatched": [
-    "Test Tour",
-    "TEST TOUR"
-   ]
+   "unmatched": []
   },
   "gl": {
    "found": 0,
